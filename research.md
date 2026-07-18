@@ -40,7 +40,16 @@
 - D1: 착수 전 기준선 `node --test system/test/*.test.mjs` = 280개 중 279 pass·0 fail·1 skip(green).
 - B1: app/theme.js에 토큰 추가(수술적·비파괴) — RADIUS(4·8·12·16·pill), FONT(10~56 기존 군집 일치), WEIGHT(400~900), ELEV(card/float/modal 그림자 프리셋). 근거: 기존 borderRadius/fontSize/weight 분포 실측 후 값 일치, 그림자는 전체 1회뿐이라 신설. 기존 매직넘버 일괄치환은 안 함(화면 만질 때 점진 적용).
 - 검증: theme.js 문법 OK, 토큰 export 확인, 코어 테스트 재실행 279 pass·0 fail(회귀 없음).
-- 결과: B1·D1 완료. 커밋 대기(Gim 승인 후). 다음 후보: B2(전투 연출) — BattleView에 히트스톱·화면흔들림·데미지팝업 강화·승리연출, 신설 토큰/모션헬퍼 활용.
+- 결과: B1·D1 완료. 커밋 2개(6e24d2f 소스임포트, 0ae6ae3 B1).
+
+## 2026-07-18 — "전부 진행": B2(전투 연출)·C2(원정 UI)
+- 요청: "전부 진행"(로드맵 코드 작업 이어서). 아트 A1~A3·서버 C3는 PC/GPU·백엔드 필요라 제외.
+- B2: BattleView에 크리티컬 타격 충격(화면 펀치 scale 1.025 + 임팩트 플래시 오버레이) 추가. 기존 setState+setTimeout 패턴 유지, noMotion이면 미적용. 승리연출은 무한웨이브 방치뷰에 안 맞아 제외. 커밋 100f12b.
+- C2: run.mjs(코어 완성·테스트됨) 확인 후 UI만 신설. RunScreen.js 작성(노드맵·생명바·보상3택·정산), features.mjs에 expedition 플래그, App.js '원정' 탭 등록. 신설 토큰 사용. 커밋 29fa3df.
+- 검증도구: JSX는 node로 문법검증 불가 → esbuild(scratchpad)로 문법 게이트. npm install 완료 후 `expo export --platform web`로 실빌드 → python http.server로 띄워 브라우저 a11y트리/JS로 구동 확인.
+- 실구동 검증 결과: 앱 부팅·콘솔에러0, '원정' 탭 노출, RunScreen 렌더("파티를 이끌고 10개 노드…"), '원정 시작' 클릭 시 노드맵(⚔️×5·🔶엘리트@6·⚔️×3·💀보스@10)·생명100%·전투버튼 정상, 탭 전환에도 state.run 유지(저장·복원 OK). 코어 테스트 279 pass·0 fail 유지.
+- 미해결/후속: 스크린샷은 방치 rAF 루프가 CDP 점유해 캡처 불가(시각 미세조정은 Gim PC). BattleView 애니를 RunScreen 전투에 결합은 후속. 아직 push 안 함(로컬 5커밋 ahead).
+- 결과: B1·B2·C1(기존완성 확인)·C2·D1 완료. 남은 코드후보: B1 토큰 화면 적용확대, B4 온보딩 리디자인, RosterScreen 1400줄 분해(C1). 아트/서버는 Gim 환경.
 
 
 
