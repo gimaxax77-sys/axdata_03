@@ -122,3 +122,8 @@
 - 검증: module-gating.test.mjs 신설(emblems on기여+off중립·차단·보존, guardians/pets off중립·차단) 3 pass. 전체 285개 중 284 pass·0 fail(FEATURES 토글 try/finally 복원, 오염 없음). GrowthPanel esbuild OK, expo 재빌드→웹 부팅·콘솔에러0. 커밋 5a4281e.
 - 진행: 게이팅 완료 6/18 (relics·emblems·guardians·pets + 기존 elements·rarity). MODULE_GATING.md 체크리스트 갱신.
 - 남음: 유닛축(runes/sigweapon/gear-신중), 콘텐츠(arena/guild/tower/season/events), summon/costumes/intimacy/shop. intimacy/sigweapon off는 씨앗 bond/oath 연쇄 점검 필요.
+
+## 2026-07-19 — P0 확장: 콘텐츠 5모듈 옵션화(arena·guild·tower·season·events)
+- (a)로직: arenaFight·guildAttack·climbTower·seasonChallenge·claimWeekly 첫줄 isOn 가드(off면 차단). 스크립트로 5파일 import+가드 앵커검증 일괄삽입. (c)상태 보존. (b)패시브 파워 없어 무관. (d)UI: ArenaGuildScreen 아레나/무한탑/길드 3Card를 CodeTag(m1/m2/m3) 앵커 역순삽입 스크립트로 isOn 래핑. ContentScreen 서브탭 필터(경쟁=arena|tower|guild, 이벤트=events|season, anims는 SUBTABS길이라 안전) + 이벤트(l1)/시즌(l2) Card 개별 게이트.
+- 검증: module-gating.test.mjs 콘텐츠 off차단 테스트 4 pass(전체 gating). 전체 286개 중 285 pass·0 fail. ArenaGuild/Content esbuild OK. expo 재빌드→웹 부팅·콘솔에러0, 콘텐츠 경쟁탭 3섹션 렌더 정상(ON 기본). 커밋 870c597.
+- 진행: 게이팅 11/18 (계정파워 4 + 콘텐츠 5 + 기존 elements/rarity). 남음: runes·sigweapon·gear(유닛축), summon·costumes·intimacy·shop. sigweapon/intimacy off는 씨앗 oath/bond 연쇄 점검 필요, gear는 핵심축 신중.
