@@ -1,5 +1,6 @@
 import { spend } from './economy.mjs';
 import { weightedPick } from './rng.mjs';
+import { isOn } from './features.mjs';
 
 // ─────────────────────────────────────────────────────────────
 // 정령/가디언 — 계정 소환수. 장착(최대 3)한 정령만 계정 배수에 합산.
@@ -33,6 +34,7 @@ function ensure(state) {
 
 // 소환 — 다이아 소모, 등급 확률로 획득(중복은 레벨업). 빈 슬롯이면 자동 장착.
 export function guardianSummon(state, rng = Math.random) {
+  if (!isOn('guardians')) return { ok: false, reason: '정령 비활성' };
   if (!spend(state.wallet, GUARDIAN_SUMMON_COST)) return { ok: false, reason: '다이아 부족', cost: GUARDIAN_SUMMON_COST };
   const g = ensure(state);
   const rarity = weightedPick(GUARD_RARITY, rng);
@@ -60,6 +62,7 @@ export function unequipGuardian(state, id) {
 
 // 장착 정령의 계정 배수 (power / currency / growth). 없으면 전부 1.
 export function guardianMods(state) {
+  if (!isOn('guardians')) return { power: 1, currency: 1, growth: 1 }; // 옵션 off → 중립
   let power = 1, currency = 1, growth = 1;
   const g = state.guardians;
   if (!g) return { power, currency, growth };

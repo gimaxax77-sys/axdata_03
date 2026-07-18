@@ -1,4 +1,5 @@
 import { spend } from './economy.mjs';
+import { isOn } from './features.mjs';
 
 // ─────────────────────────────────────────────────────────────
 // 엠블럼(문장) — 계정 단위 수집형 성장. 유물과 형제지만 축이 다르다.
@@ -30,6 +31,7 @@ export function emblemUpgradeCost(level) {
 }
 
 export function upgradeEmblem(state, id) {
+  if (!isOn('emblems')) return { ok: false, reason: '엠블럼 비활성' };
   if (!EMBLEMS[id]) return { ok: false, reason: '알 수 없는 문장' };
   const cap = emblemCap(id);
   const lv = (state.emblems && state.emblems[id]) || 0;
@@ -49,6 +51,7 @@ export function emblemComplete(state) {
 
 // 계정 배수 (power / currency / growth). 문장 없으면 전부 1. 완성 시 파워 보너스.
 export function emblemMods(state) {
+  if (!isOn('emblems')) return { power: 1, currency: 1, growth: 1 }; // 옵션 off → 중립
   let power = 1, currency = 1, growth = 1;
   const owned = state.emblems || {};
   for (const [id, lv] of Object.entries(owned)) {

@@ -1,6 +1,7 @@
 import { spend } from './economy.mjs';
 import { weightedPick } from './rng.mjs';
 import { spendMaterial } from './materials.mjs';
+import { isOn } from './features.mjs';
 
 // 펫 등급 확률 (gacha와 분리해 순환 의존 방지).
 const PET_RARITY = [
@@ -124,6 +125,7 @@ export function petEffectLabel(type, concept) {
 
 // 펫 소환: 다이아 소모 → 등급 확률로 펫 획득(중복은 레벨업), 빈 슬롯이면 자동 장착.
 export function petSummon(state, rng = Math.random) {
+  if (!isOn('pets')) return { ok: false, reason: '펫 비활성' };
   if (!spend(state.wallet, PET_PULL_COST)) return { ok: false, reason: '다이아 부족', cost: PET_PULL_COST };
   const rarity = weightedPick(PET_RARITY, rng);
   const pool = Object.values(PETS).filter((p) => p.rarity === rarity.id);
@@ -166,6 +168,7 @@ export function unequipPet(state, id) {
 
 // 장착 펫들의 계정 배수 (power/currency/growth). 없으면 전부 1.
 export function petMods(state) {
+  if (!isOn('pets')) return { power: 1, currency: 1, growth: 1 }; // 옵션 off → 중립
   let power = 1, currency = 1, growth = 1;
   const pets = state.pets;
   if (!pets) return { power, currency, growth };
