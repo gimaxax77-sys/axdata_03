@@ -76,6 +76,7 @@ function BattleView({ party = EMPTY_FORMATION, enemyEmoji = '👹', enemyKey = n
   const [walkTok, setWalkTok] = useState(0);   // 웨이브 전진(걷기) 트리거
   const [enemyAtk, setEnemyAtk] = useState(0); // 적 공격(반격) 재생 트리거
   const [enemyFlash, setEnemyFlash] = useState(false);
+  const [punch, setPunch] = useState(false);   // 타격 충격(화면 펀치+플래시) — 크리티컬 순간
   const floats = useRef([]);
   const fid = useRef(0);
 
@@ -95,6 +96,7 @@ function BattleView({ party = EMPTY_FORMATION, enemyEmoji = '👹', enemyKey = n
         setEnemyFlash(true); setTimeout(() => setEnemyFlash(false), 120);
         const crit = Math.random() < 0.28;
         const mul = crit ? 1.9 : 1;
+        if (crit) { setPunch(true); setTimeout(() => setPunch(false), 90); } // 크리티컬 = 화면 펀치+플래시
         enemyHp.current -= enemyDmg * mul * (0.85 + Math.random() * 0.3);
         pushFloat(Math.round(enemyDmg * mul * 4200 * (0.85 + Math.random() * 0.3)), 'enemy', crit);
         if (enemyHp.current <= 0) {
@@ -137,8 +139,10 @@ function BattleView({ party = EMPTY_FORMATION, enemyEmoji = '👹', enemyKey = n
 
   const heroCount = party.front.length + party.mid.length + party.back.length;
 
+  const impact = punch && !noMotion;
   return (
-    <View style={s.arena}>
+    <View style={[s.arena, impact && s.arenaPunch]}>
+      {impact && <View pointerEvents="none" style={s.flash} />}
       <View style={s.heroSide}>
         <View style={s.floatLayer}>{renderFloats('hero')}</View>
         {/* 전투 화면은 1·2열(중열→전열)만 표시 — 후열은 숨겨 화면을 정리(전투 로직엔 영향 없음). */}
@@ -172,6 +176,10 @@ export default React.memo(BattleView);
 const s = StyleSheet.create({
   // 무대를 꽉 채우고 파티·적을 바닥선(flex-end)에 세운다(배경 위에 서 있게).
   arena: { flex: 1, flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-around', paddingHorizontal: 4, paddingBottom: 6 },
+  // 크리티컬 타격 순간 — 무대를 살짝 키워 "충격"을 준다(화면 흔들림-lite). noMotion이면 미적용.
+  arenaPunch: { transform: [{ scale: 1.025 }] },
+  // 임팩트 플래시 — 타격 순간 화면 위에 순간적으로 번지는 밝은 오버레이.
+  flash: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: T.accent, opacity: 0.14, zIndex: 8 },
   side: { alignItems: 'center', width: 128, justifyContent: 'flex-end' },
   // 히어로 쪽 — 3열(후열·중열·전열) 편성. 큰 스프라이트에 맞춰 넓게.
   heroSide: { alignItems: 'center', width: 224, justifyContent: 'flex-end' },
