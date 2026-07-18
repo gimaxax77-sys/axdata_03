@@ -49,7 +49,15 @@
 - 검증도구: JSX는 node로 문법검증 불가 → esbuild(scratchpad)로 문법 게이트. npm install 완료 후 `expo export --platform web`로 실빌드 → python http.server로 띄워 브라우저 a11y트리/JS로 구동 확인.
 - 실구동 검증 결과: 앱 부팅·콘솔에러0, '원정' 탭 노출, RunScreen 렌더("파티를 이끌고 10개 노드…"), '원정 시작' 클릭 시 노드맵(⚔️×5·🔶엘리트@6·⚔️×3·💀보스@10)·생명100%·전투버튼 정상, 탭 전환에도 state.run 유지(저장·복원 OK). 코어 테스트 279 pass·0 fail 유지.
 - 미해결/후속: 스크린샷은 방치 rAF 루프가 CDP 점유해 캡처 불가(시각 미세조정은 Gim PC). BattleView 애니를 RunScreen 전투에 결합은 후속. 아직 push 안 함(로컬 5커밋 ahead).
-- 결과: B1·B2·C1(기존완성 확인)·C2·D1 완료. 남은 코드후보: B1 토큰 화면 적용확대, B4 온보딩 리디자인, RosterScreen 1400줄 분해(C1). 아트/서버는 Gim 환경.
+- 결과: B1·B2·C1(기존완성 확인)·C2·D1 완료. 남은 코드후보: B1 토큰 화면 적용확대, B4 온보딩 리디자인, RosterScreen 분해. 아트/서버는 Gim 환경.
+- push 완료: b1f3632..3381abb (5커밋).
+
+## 2026-07-18 — RosterScreen 분해정리(순수 리팩터)
+- 요청: "분해정리 진행". RosterScreen.js(1400줄)가 단일 최대 복잡도 핫스팟이라 표시 헬퍼를 분리.
+- 진행: app/screens/roster/describe.js 신설 — 순수 표시 헬퍼(describeEffect/Skill/TeamBuff/Gear/GearItem/Subs/Awaken/Rune·statIcon·STAT_ICON·ov·DeltaText·costumeNeedText) + 표시 상수(SLOT_KO·GEAR_CATS·ROSTER_TABS·DETAIL_TABS) 이동. 상태 얽힌 하위패널은 위험/대공사라 이번 제외.
+- 방법: 본체(224줄~) 사용횟수 실측으로 재-import 대상 13개 확정, 헬퍼전용 import(gearContribution·SOURCE_LABEL)만 제거. 삭제는 줄번호 기반 Node 스크립트(앵커 검증 포함)로 공백 불일치 위험 제거. 1400→1266줄(-138). 유지: RARITY_RANK·rarityColor/Text·powerWithGearItem/RuneItem/NextStar.
+- 검증: esbuild 문법 OK(양파일), import 삽입·잔존 import 0·중복정의 0 확인. expo export 재빌드→실구동: 영웅 화면 정상(상세탭 육성/장비/스킬/꾸미기=DETAIL_TABS, 로스터탭=ROSTER_TABS, 스탯아이콘=statIcon, "전투력375→420 ▲+45"=DeltaText 모두 정상), 콘솔에러 0. 코어테스트 279 pass·0 fail.
+- 결과: 커밋 17b01aa. 동작 불변 순수 정리 완료. 후속 분해 후보: 상태 얽힌 하위패널(장비/룬/스킬)은 프롭 스레딩 필요해 별도 신중 작업.
 
 
 
