@@ -1,0 +1,40 @@
+name: Android Build (EAS)
+
+# 안드로이드 APK/AAB를 클라우드에서 빌드. GitHub Actions 탭에서 "Run workflow"
+# 버튼으로 실행(폰의 GitHub 앱에서도 가능). 로컬 터미널 불필요.
+#   사전: 저장소 Settings > Secrets > Actions 에 EXPO_TOKEN 추가.
+#   (EXPO_TOKEN = expo.dev > Account > Access tokens 에서 발급)
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: '빌드 프로필 (preview=APK / production=AAB)'
+        type: choice
+        options: [preview, production]
+        default: preview
+      variant:
+        description: '앱 변형'
+        type: choice
+        options: [fantasy, scifi]
+        default: fantasy
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: EAS Build (Android)
+        env:
+          APP_VARIANT: ${{ inputs.variant == 'scifi' && 'scifi' || '' }}
+        run: eas build -p android --profile ${{ inputs.profile }} --non-interactive --no-wait
+        # --no-wait: 빌드를 클라우드에 맡기고 즉시 종료. 진행은 expo.dev에서 확인.

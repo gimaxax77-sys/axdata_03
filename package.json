@@ -1,0 +1,43 @@
+{
+  "name": "eldria-idle",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "node --test system/test/*.test.mjs && node system/verify-genres.mjs && node system/verify-character.mjs",
+    "test:smoke": "node system/demo.mjs && node system/demo-build.mjs && node system/demo-gacha.mjs && node system/sim/balance.mjs",
+    "build:play": "EXPO_OFFLINE=1 expo export --platform web && node scripts/build-play.mjs",
+    "gen:portraits": "node scripts/gen-portraits.mjs",
+    "gen:screens": "node scripts/gen-screenshots.mjs",
+    "build:apk": "eas build -p android --profile preview",
+    "build:aab": "eas build -p android --profile production",
+    "build:apk:scifi": "APP_VARIANT=scifi eas build -p android --profile preview",
+    "build:aab:scifi": "APP_VARIANT=scifi eas build -p android --profile production",
+    "ota": "eas update --branch production",
+    "ota:preview": "eas update --branch preview"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~3.2.3",
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "@supabase/supabase-js": "^2.110.2",
+    "expo": "~51.0.0",
+    "expo-av": "~14.0.7",
+    "expo-constants": "~16.0.2",
+    "expo-font": "~12.0.10",
+    "expo-haptics": "~13.0.1",
+    "expo-linear-gradient": "~13.0.2",
+    "expo-status-bar": "~1.12.1",
+    "expo-updates": "~0.25.24",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native": "0.74.5",
+    "react-native-web": "^0.19.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0"
+  },
+  "private": true
+}

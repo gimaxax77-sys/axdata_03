@@ -1,0 +1,38 @@
+name: OTA Update (EAS Update)
+
+# 재빌드·스토어 심사 없이 JS·밸런스·아트를 설치된 앱에 즉시 배포.
+# 이 게임은 순수 JS라 대부분의 변경이 OTA로 처리됨(네이티브 의존성 변경만 재빌드 필요).
+#   사전: 저장소 Secrets 에 EXPO_TOKEN 추가.
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: '채널/브랜치 (preview=테스트 APK / production=배포본)'
+        type: choice
+        options: [preview, production]
+        default: preview
+      message:
+        description: '업데이트 메모'
+        required: false
+        default: 'manual OTA'
+  # 자동 배포를 원하면 아래 push 트리거의 주석을 해제하세요(원하는 브랜치로).
+  # push:
+  #   branches: [ main ]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: Publish OTA
+        run: eas update --branch ${{ inputs.branch || 'preview' }} --message "${{ inputs.message || format('CI {0}', github.sha) }}" --non-interactive

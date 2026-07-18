@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, 'claude/**']
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # 코어/테스트는 의존성 없는 순수 ESM이라 install 불필요 → 빠르고 견고.
+      - name: Unit tests + assertions
+        run: npm test
+      - name: Smoke (demos + balance sim)
+        run: npm run test:smoke

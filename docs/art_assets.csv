@@ -1,0 +1,279 @@
+﻿분류,세부타입,ID,이름,규격,현재상태,파일경로/키,우선순위,비고
+캐릭터,초상,kael,카엘,512x512 PNG,등록됨,assets/char/fantasy/kael.png,P1,불꽃의 검사
+캐릭터,초상,luna,루나,512x512 PNG,등록됨,assets/char/fantasy/luna.png,P1,달빛 성녀
+캐릭터,초상,gwen,그웬,512x512 PNG,등록됨,assets/char/fantasy/gwen.png,P1,서리 수호기사
+캐릭터,초상,ciel,시엘,512x512 PNG,등록됨,assets/char/fantasy/ciel.png,P1,바람의 무희
+캐릭터,초상,bran,브란,512x512 PNG,등록됨,assets/char/fantasy/bran.png,P1,대지의 방패
+캐릭터,초상,ael,아엘,512x512 PNG,등록됨,assets/char/fantasy/ael.png,P1,빛의 예언자
+캐릭터,초상,ara,아라,512x512 PNG,등록됨,assets/char/fantasy/ara.png,P1,폭풍검
+캐릭터,초상,mir,미르,512x512 PNG,등록됨,assets/char/fantasy/mir.png,P1,견습 검사
+캐릭터,초상,pyra,피라,512x512 PNG,등록됨,assets/char/fantasy/pyra.png,P1,홍염의 방벽
+캐릭터,초상,frost,프로스트,512x512 PNG,등록됨,assets/char/fantasy/frost.png,P1,빙하의 자객
+캐릭터,초상,marina,마리나,512x512 PNG,등록됨,assets/char/fantasy/marina.png,P1,조수의 치유사
+캐릭터,초상,signe,시그네,512x512 PNG,등록됨,assets/char/fantasy/signe.png,P1,전열의 고수병
+캐릭터,초상,aurel,아우렐,512x512 PNG,등록됨,assets/char/fantasy/aurel.png,P1,여명의 성검사
+캐릭터,초상,nyx,닉스,512x512 PNG,등록됨,assets/char/fantasy/nyx.png,P1,심연의 대예언자
+캐릭터,초상,kai,카이,512x512 PNG,필요,assets/char/fantasy/kai.png,P1,풋내기 도둑
+캐릭터,초상,vera,베라,512x512 PNG,필요,assets/char/fantasy/vera.png,P1,칠흑의 자객
+캐릭터,초상,robin,로빈,512x512 PNG,필요,assets/char/fantasy/robin.png,P1,숲의 궁수
+캐릭터,초상,sylas,사일러스,512x512 PNG,필요,assets/char/fantasy/sylas.png,P1,빛의 궁성
+캐릭터,초상,elara,엘라라,512x512 PNG,필요,assets/char/fantasy/elara.png,P1,화염 마도사
+캐릭터,초상,oriel,오리엘,512x512 PNG,필요,assets/char/fantasy/oriel.png,P1,혼돈의 대마도사
+캐릭터,초상,toren,토렌,512x512 PNG,필요,assets/char/fantasy/toren.png,P1,풋내기 방패병
+캐릭터,초상,kordan,코르단,512x512 PNG,필요,assets/char/fantasy/kordan.png,P1,화염 성벽
+캐릭터,초상,ymir,이미르,512x512 PNG,필요,assets/char/fantasy/ymir.png,P1,빙하 거인
+캐릭터,초상,nella,넬라,512x512 PNG,필요,assets/char/fantasy/nella.png,P1,견습 사제
+캐릭터,초상,jax,잭스,512x512 PNG,필요,assets/char/fantasy/jax.png,P1,뒷골목 칼잡이
+캐릭터,초상,mira,미라,512x512 PNG,필요,assets/char/fantasy/mira.png,P1,안개 자객
+캐릭터,초상,raven,레이븐,512x512 PNG,필요,assets/char/fantasy/raven.png,P1,심연의 그림자
+캐릭터,초상,finn,핀,512x512 PNG,필요,assets/char/fantasy/finn.png,P1,견습 사냥꾼
+캐릭터,초상,lyra,리라,512x512 PNG,필요,assets/char/fantasy/lyra.png,P1,달빛 궁수
+캐릭터,초상,seren,세렌,512x512 PNG,필요,assets/char/fantasy/seren.png,P1,천공의 대궁수
+캐릭터,초상,pip,핍,512x512 PNG,필요,assets/char/fantasy/pip.png,P1,견습 마법사
+캐릭터,초상,thalia,탈리아,512x512 PNG,필요,assets/char/fantasy/thalia.png,P1,빙결 마도사
+캐릭터,초상,nocturne,녹턴,512x512 PNG,필요,assets/char/fantasy/nocturne.png,P1,칠흑의 대현자
+캐릭터,스프라이트,kael,카엘,128x128 가로스트립,없음,assets/units/fantasy/kael/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,luna,루나,128x128 가로스트립,없음,assets/units/fantasy/luna/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,gwen,그웬,128x128 가로스트립,없음,assets/units/fantasy/gwen/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,ciel,시엘,128x128 가로스트립,없음,assets/units/fantasy/ciel/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,bran,브란,128x128 가로스트립,없음,assets/units/fantasy/bran/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,ael,아엘,128x128 가로스트립,없음,assets/units/fantasy/ael/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,ara,아라,128x128 가로스트립,없음,assets/units/fantasy/ara/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,mir,미르,128x128 가로스트립,없음,assets/units/fantasy/mir/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,pyra,피라,128x128 가로스트립,없음,assets/units/fantasy/pyra/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,frost,프로스트,128x128 가로스트립,없음,assets/units/fantasy/frost/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,marina,마리나,128x128 가로스트립,없음,assets/units/fantasy/marina/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,signe,시그네,128x128 가로스트립,없음,assets/units/fantasy/signe/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,aurel,아우렐,128x128 가로스트립,없음,assets/units/fantasy/aurel/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,nyx,닉스,128x128 가로스트립,없음,assets/units/fantasy/nyx/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,kai,카이,128x128 가로스트립,없음,assets/units/fantasy/kai/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,vera,베라,128x128 가로스트립,없음,assets/units/fantasy/vera/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,robin,로빈,128x128 가로스트립,없음,assets/units/fantasy/robin/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,sylas,사일러스,128x128 가로스트립,없음,assets/units/fantasy/sylas/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,elara,엘라라,128x128 가로스트립,없음,assets/units/fantasy/elara/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,oriel,오리엘,128x128 가로스트립,없음,assets/units/fantasy/oriel/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,toren,토렌,128x128 가로스트립,없음,assets/units/fantasy/toren/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,kordan,코르단,128x128 가로스트립,없음,assets/units/fantasy/kordan/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,ymir,이미르,128x128 가로스트립,없음,assets/units/fantasy/ymir/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,nella,넬라,128x128 가로스트립,없음,assets/units/fantasy/nella/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,jax,잭스,128x128 가로스트립,없음,assets/units/fantasy/jax/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,mira,미라,128x128 가로스트립,없음,assets/units/fantasy/mira/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,raven,레이븐,128x128 가로스트립,없음,assets/units/fantasy/raven/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,finn,핀,128x128 가로스트립,없음,assets/units/fantasy/finn/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,lyra,리라,128x128 가로스트립,없음,assets/units/fantasy/lyra/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,seren,세렌,128x128 가로스트립,없음,assets/units/fantasy/seren/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,pip,핍,128x128 가로스트립,없음,assets/units/fantasy/pip/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,thalia,탈리아,128x128 가로스트립,없음,assets/units/fantasy/thalia/,P5,idle/attack/hit/death 4상태
+캐릭터,스프라이트,nocturne,녹턴,128x128 가로스트립,없음,assets/units/fantasy/nocturne/,P5,idle/attack/hit/death 4상태
+장비,무기:검,IRON_SWORD,강철검,128x128 PNG,이모지,,P4,
+장비,무기:검,RUNE_BLADE,룬블레이드,128x128 PNG,이모지,,P4,
+장비,무기:단검,DAGGER,단검,128x128 PNG,이모지,,P4,
+장비,무기:활,BOW,장궁,128x128 PNG,이모지,,P4,
+장비,무기:도끼,AXE,전투도끼,128x128 PNG,이모지,,P4,
+장비,무기:검,GREATSWORD,양손대검,128x128 PNG,이모지,,P4,
+장비,무기:방패,TOWER_SHIELD,타워실드,128x128 PNG,이모지,,P4,
+장비,무기:스태프,ARCANE_TOME,비전서,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:helmet,IRON_HELM,강철투구,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:armor,PLATE_ARMOR,판금갑옷,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:armor,AEGIS,이지스,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:gloves,BATTLE_GLOVES,전투장갑,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:pants,GREAVES,판금각반,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:necklace,VITAL_AMULET,생명목걸이,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:earring,FOCUS_EARRING,집중귀걸이,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:accessory,CRIT_RING,치명반지,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:accessory,PIERCE_CHARM,관통부적,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:cloak,SWIFT_CLOAK,질풍망토,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:cloak,SHADE_CLOAK,그림자망토,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:earring,HAWK_EARRING,매눈귀걸이,128x128 PNG,이모지,,P4,
+장비,무기:검,VOID_EDGE,공허검,128x128 PNG,이모지,,P4,
+장비,무기:방패,GUARDIAN_WALL,수호벽,128x128 PNG,이모지,,P4,
+장비,방어구/장신구:mount,WAR_STEED,군마,128x128 PNG,이모지,,P4,
+장비,무기:검,DRAGON_FANG,용아검,128x128 PNG,이모지,,P4,세트:CHAMPION
+장비,방어구/장신구:armor,BULWARK_PLATE,성벽갑옷,128x128 PNG,이모지,,P4,세트:CHAMPION
+장비,방어구/장신구:accessory,OMNI_CHARM,만능부적,128x128 PNG,이모지,,P4,세트:CHAMPION
+장비,방어구/장신구:helmet,VALIANT_HELM,용사투구,128x128 PNG,이모지,,P4,세트:CHAMPION
+장비,방어구/장신구:cloak,VALIANT_CLOAK,용사망토,128x128 PNG,이모지,,P4,세트:CHAMPION
+장비,무기:검,RAGE_BLADE,광란검,128x128 PNG,이모지,,P4,세트:BERSERKER
+장비,방어구/장신구:gloves,RAGE_GAUNTLET,광란건틀릿,128x128 PNG,이모지,,P4,세트:BERSERKER
+장비,방어구/장신구:cloak,RAGE_MANTLE,광란망토,128x128 PNG,이모지,,P4,세트:BERSERKER
+장비,방어구/장신구:helmet,BASTION_HELM,수호투구,128x128 PNG,이모지,,P4,세트:BASTION
+장비,무기:방패,BASTION_WALL,수호방벽,128x128 PNG,이모지,,P4,세트:BASTION
+장비,방어구/장신구:pants,BASTION_LEGS,수호각반,128x128 PNG,이모지,,P4,세트:BASTION
+장비,방어구/장신구:necklace,SAGE_PENDANT,현자펜던트,128x128 PNG,이모지,,P4,세트:ARCANIST
+장비,방어구/장신구:earring,SAGE_STUD,현자귀걸이,128x128 PNG,이모지,,P4,세트:ARCANIST
+장비,방어구/장신구:mount,SPIRIT_MOUNT,정령마,128x128 PNG,이모지,,P4,세트:ARCANIST
+스킬,공격,BERSERK,광폭,128x128 원형,이모지,,P4,공격력 대폭 상승
+스킬,방어,FORTRESS,요새,128x128 원형,이모지,,P4,체력·방어 상승
+스킬,치명타,PRECISION,정밀,128x128 원형,이모지,,P4,치명타 확률/피해
+스킬,흡혈,VAMPIRIC,흡혈,128x128 원형,이모지,,P4,가한 피해로 생존력 확보
+스킬,관통,PIERCE,관통,128x128 원형,이모지,,P4,적 방어 무시
+스킬,팀버프,RALLY,지휘,128x128 원형,이모지,,P4,팀 전체 공격력 상승
+스킬,속도,SWIFT,신속,128x128 원형,이모지,,P4,속도 상승(공격 빈도)
+스킬,치명타/관통,RUIN,파멸,128x128 원형,이모지,,P4,방어 무시 + 치명 피해 (글래스캐논)
+스킬,흡혈/방어,UNDYING,불굴,128x128 원형,이모지,,P4,체력 + 흡혈 (브루저 생존)
+스킬,공격/속도,ONSLAUGHT,맹공,128x128 원형,이모지,,P4,공격 + 속도 (연속 압박)
+스킬,방어,BULWARK,철벽,128x128 원형,이모지,,P4,방어 + 체력 대폭 (순수 탱커)
+스킬,공격/방어/속도,PERFECT,완성,128x128 원형,이모지,,P4,전 스탯 균형 상승
+스킬,기타,GUARDING,철옹,128x128 원형,이모지,,P4,받는 피해 감소 (생존 특화)
+스킬,치명타/공격,SIG_FLAME_EDGE,불꽃검,128x128 원형,이모지,,P4,공격+치명 특화
+스킬,팀버프/흡혈,SIG_MOON_BLESSING,달의 축복,128x128 원형,이모지,,P4,팀 공격+흡혈
+스킬,방어,SIG_FROST_GUARD,서리방벽,128x128 원형,이모지,,P4,체력·방어 특화
+스킬,공격/속도,SIG_WIND_DANCE,바람춤,128x128 원형,이모지,,P4,속도·공격
+스킬,흡혈/방어,SIG_EARTH_AEGIS,대지수호,128x128 원형,이모지,,P4,체력·흡혈
+스킬,팀버프/치명타,SIG_LIGHT_ORACLE,빛의 신탁,128x128 원형,이모지,,P4,팀 공격+팀 치명
+스킬,관통/공격,SIG_STORM_BLADE,폭풍검,128x128 원형,이모지,,P4,공격·관통
+스킬,공격,SIG_NOVICE,견습 일격,128x128 원형,이모지,,P4,기본 공격 강화
+스킬,흡혈/방어,SIG_EMBER_WALL,잉걸 방벽,128x128 원형,이모지,,P4,체력·방어+흡혈(불굴 수호)
+스킬,치명타/관통/공격,SIG_GLACIER_EDGE,빙하검,128x128 원형,이모지,,P4,공격+관통·치명피해(처형)
+스킬,팀버프/흡혈,SIG_TIDE_HYMN,조수 성가,128x128 원형,이모지,,P4,팀 피해경감+강한 흡혈(수호 치유)
+스킬,팀버프/속도,SIG_WAR_CHANT,전열 함성,128x128 원형,이모지,,P4,팀 공격+자신 속도(지휘)
+스킬,팀버프/치명타/관통/공격,SIG_DAWNBREAKER,여명검,128x128 원형,이모지,,P4,공격+치명+관통+팀치명(초월 딜러)
+스킬,팀버프/흡혈,SIG_ABYSS_ORACLE,심연 계시,128x128 원형,이모지,,P4,팀 공격+피해경감+치명(만능 지원)
+스킬,속도,SIG_ROGUE_NOVICE,재빠른 손놀림,128x128 원형,이모지,,P4,속도 강화(도적 입문)
+스킬,치명타/공격/속도,SIG_NIGHT_FANG,야습의 송곳니,128x128 원형,이모지,,P4,속도+공격+치명 특화(암습)
+스킬,치명타/공격,SIG_FOREST_ARROW,숲의 화살,128x128 원형,이모지,,P4,공격+치명(정밀 사격)
+스킬,팀버프/치명타/관통/공격,SIG_LIGHT_ARROW,광명의 화살,128x128 원형,이모지,,P4,공격+치명+관통+팀치명(저격)
+스킬,치명타/공격,SIG_INFERNO_BOLT,화염 마탄,128x128 원형,이모지,,P4,공격+치명피해(마법 폭발)
+스킬,팀버프/치명타/관통/공격,SIG_CHAOS_NOVA,혼돈의 신성,128x128 원형,이모지,,P4,공격+치명+관통+팀공격(초월 캐스터)
+스킬,방어,SIG_VANGUARD_NOVICE,풋내기 방벽,128x128 원형,이모지,,P4,체력 강화(수호 입문)
+스킬,방어,SIG_FLAME_BASTION,화염 요새,128x128 원형,이모지,,P4,체력·방어+피해감소(불굴 수호)
+스킬,팀버프/흡혈/방어,SIG_GLACIAL_TITAN,빙하 거인,128x128 원형,이모지,,P4,체력·방어+피해감소+팀방어(초월 수호)
+스킬,팀버프,SIG_SUPPORT_NOVICE,견습 축복,128x128 원형,이모지,,P4,팀 공격 소폭(지원 입문)
+스킬,치명타/속도,SIG_ALLEY_BLADE,뒷골목 칼솜씨,128x128 원형,이모지,,P4,속도+치명(거리의 칼잡이)
+스킬,공격/속도,SIG_MIST_STRIKE,안개 일격,128x128 원형,이모지,,P4,속도+공격+회피(안개 속 기습)
+스킬,팀버프/치명타/공격/속도,SIG_ABYSS_SHADOW,심연의 그림자,128x128 원형,이모지,,P4,속도+공격+치명+회피+팀공격(초월 암살)
+스킬,공격,SIG_ARCHER_NOVICE,견습 사냥술,128x128 원형,이모지,,P4,공격 강화(궁수 입문)
+스킬,치명타/공격,SIG_MOONLIGHT_SHOT,달빛 사격,128x128 원형,이모지,,P4,공격+치명+명중(정조준)
+스킬,팀버프/치명타/관통/공격,SIG_CELESTIAL_ARROW,천공의 화살,128x128 원형,이모지,,P4,공격+치명+관통+명중+팀치명(초월 저격)
+스킬,공격,SIG_MAGE_NOVICE,견습 마법,128x128 원형,이모지,,P4,공격 강화(법사 입문)
+스킬,치명타/관통/공격,SIG_FROST_NOVA,서리 폭발,128x128 원형,이모지,,P4,공격+치명피해+절대공격(빙결 마법)
+스킬,치명타/관통/공격,SIG_VOID_SURGE,공허의 쇄도,128x128 원형,이모지,,P4,공격+치명+절대공격(금단 마법)
+펫,R,P_CAT,럭키캣,128x128 초상,이모지,,P4,
+펫,R,P_WOLF,늑대,128x128 초상,이모지,,P4,
+펫,R,P_OWL,부엉이,128x128 초상,이모지,,P4,
+펫,SR,P_FOX,황금여우,128x128 초상,이모지,,P4,
+펫,SR,P_BEAR,큰곰,128x128 초상,이모지,,P4,
+펫,SR,P_TURTLE,거북,128x128 초상,이모지,,P4,
+펫,SSR,P_DRAGON,드래곤,128x128 초상,이모지,,P4,
+펫,SSR,P_PHOENIX,불사조,128x128 초상,이모지,,P4,
+펫,SSR,P_UNICORN,유니콘,128x128 초상,이모지,,P4,
+펫,SSR,P_KRAKEN,크라켄,128x128 초상,이모지,,P4,
+펫,UR,P_KIRIN,기린,128x128 초상,이모지,,P4,
+펫,UR,P_LEVIATHAN,레비아탄,128x128 초상,이모지,,P4,
+유물,R,R_POWER,전투의 성물,128x128,이모지,,P4,
+유물,R,R_GOLD,황금 우상,128x128,이모지,,P4,
+유물,R,R_GROWTH,정수의 결정,128x128,이모지,,P4,
+유물,SR,R_WARLORD,군신의 인장,128x128,이모지,,P4,
+유물,SR,R_TREASURY,보물고 열쇠,128x128,이모지,,P4,
+유물,SR,R_SAGE,현자의 서,128x128,이모지,,P4,
+유물,SSR,R_TITAN,거신의 심장,128x128,이모지,,P4,
+유물,SSR,R_MIDAS,마이더스의 손,128x128,이모지,,P4,
+엠블럼,R,E_VALOR,용맹의 문장,128x128 문장,이모지,,P4,
+엠블럼,R,E_FORTUNE,행운의 문장,128x128 문장,이모지,,P4,
+엠블럼,R,E_WISDOM,지혜의 문장,128x128 문장,이모지,,P4,
+엠블럼,SR,E_CONQUEST,정복의 문장,128x128 문장,이모지,,P4,
+엠블럼,SSR,E_ETERNITY,영원의 문장,128x128 문장,이모지,,P4,
+정령/가디언,R,G_SALAMANDER,불도마뱀,128x128 초상,이모지,,P4,
+정령/가디언,R,G_UNDINE,물의 정령,128x128 초상,이모지,,P4,
+정령/가디언,R,G_SYLPH,바람 정령,128x128 초상,이모지,,P4,
+정령/가디언,SR,G_GOLEM,대지 골렘,128x128 초상,이모지,,P4,
+정령/가디언,SR,G_KELPIE,켈피,128x128 초상,이모지,,P4,
+정령/가디언,SSR,G_PHOENIX,불사조령,128x128 초상,이모지,,P4,
+코스튬,SR,CS_WANDERER,방랑자 복장,초상 변형,이모지,,P4,
+코스튬,SR,CS_FESTIVAL,축제 의상,초상 변형,이모지,,P4,
+코스튬,SSR,CS_MIDNIGHT,심야 예복,초상 변형,이모지,,P4,
+코스튬,SSR,CS_KNIGHT,영웅의 갑주,초상 변형,이모지,,P4,
+코스튬,UR,CS_KAEL_CRIMSON,홍염 검성,초상 변형,이모지,,P4,
+코스튬,SSR,CS_ROYAL,왕실 정장,초상 변형,이모지,,P4,
+코스튬,UR,CS_ARCHON,집정관 예복,초상 변형,이모지,,P4,
+코스튬,SSR,CS_TITAN,거신 갑주,초상 변형,이모지,,P4,
+코스튬,SSR,CS_INFERNO,업화 예복,초상 변형,이모지,,P4,
+코스튬,SSR,CS_GLACIER,빙하 예복,초상 변형,이모지,,P4,
+코스튬,SSR,CS_VERDANT,수림 예복,초상 변형,이모지,,P4,
+코스튬,SSR,CS_RADIANT,광휘 예복,초상 변형,이모지,,P4,
+코스튬,SSR,CS_UMBRAL,심연 예복,초상 변형,이모지,,P4,
+룬,RUNE_RARITY,N,일반,128x128,이모지,,P4,
+룬,RUNE_RARITY,R,고급,128x128,이모지,,P4,
+룬,RUNE_RARITY,SR,희귀,128x128,이모지,,P4,
+룬,RUNE_RARITY,SSR,영웅,128x128,이모지,,P4,
+룬,RUNE_RARITY,UR,신화,128x128,이모지,,P4,
+룬,RUNE_SETS,RAGE,분노,128x128,이모지,,P4,
+룬,RUNE_SETS,GUARD,수호,128x128,이모지,,P4,
+룬,RUNE_SETS,SWIFT,질풍,128x128,이모지,,P4,
+룬,RUNE_SETS,FATAL,치명,128x128,이모지,,P4,
+룬,RUNE_SETS,PIERCE,관통,128x128,이모지,,P4,
+룬,RUNE_SETS,MENDING,치유,128x128,이모지,,P4,
+개성/프로필,PROFILE_FRAMES,none,기본,프로필 아이콘,이모지,,P4,
+개성/프로필,PROFILE_FRAMES,bronze,청동 테,프로필 아이콘,이모지,,P4,
+개성/프로필,PROFILE_FRAMES,silver,은빛 테,프로필 아이콘,이모지,,P4,
+개성/프로필,PROFILE_FRAMES,gold,황금 테,프로필 아이콘,이모지,,P4,
+개성/프로필,PROFILE_FRAMES,mythic,신화 테,프로필 아이콘,이모지,,P4,
+개성/프로필,PROFILE_TITLES,none,칭호 없음,프로필 아이콘,이모지,,P4,
+개성/프로필,PROFILE_TITLES,novice,견습 조련사,프로필 아이콘,이모지,,P4,
+개성/프로필,PROFILE_TITLES,hunter,심연 사냥꾼,프로필 아이콘,이모지,,P4,
+개성/프로필,PROFILE_TITLES,legend,엘드리아의 전설,프로필 아이콘,이모지,,P4,
+UI심볼,속성,FIRE,불,128x128,🔥,,P3,원형 뱃지
+UI심볼,속성,WATER,물,128x128,💧,,P3,원형 뱃지
+UI심볼,속성,WOOD,숲,128x128,🌿,,P3,원형 뱃지
+UI심볼,속성,LIGHT,빛,128x128,✨,,P3,원형 뱃지
+UI심볼,속성,DARK,어둠,128x128,🌑,,P3,원형 뱃지
+UI심볼,직업,VANGUARD,수호기사,128x128,🛡️,,P3,
+UI심볼,직업,STRIKER,검투사,128x128,⚔️,,P3,
+UI심볼,직업,SUPPORT,성녀,128x128,✨,,P3,
+UI심볼,직업,ROGUE,도적,128x128,🗡️,,P3,
+UI심볼,직업,ARCHER,궁수,128x128,🏹,,P3,
+UI심볼,직업,MAGE,법사,128x128,🔮,,P3,
+UI심볼,등급프레임,N,N 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,등급프레임,R,R 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,등급프레임,SR,SR 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,등급프레임,SSR,SSR 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,등급프레임,UR,UR 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,재화,currency,currency,128x128,🪙,,P3,자원바
+UI심볼,재화,growth,growth,128x128,💠,,P3,자원바
+UI심볼,재화,summon,summon,128x128,🔮,,P3,자원바
+UI심볼,재화,gem,gem,128x128,💎,,P3,자원바
+UI심볼,난이도,normal,일반,난이도칩,이모지,,P3,
+UI심볼,난이도,hard,험난,난이도칩,이모지,,P3,
+UI심볼,난이도,hell,지옥,난이도칩,이모지,,P3,
+UI심볼,난이도,abyss,나락,난이도칩,이모지,,P3,
+UI심볼,메인탭,idle,전투,탭 아이콘,이모지,,P3,
+UI심볼,메인탭,roster,영웅,탭 아이콘,이모지,,P3,
+UI심볼,메인탭,gacha,소환,탭 아이콘,이모지,,P3,
+UI심볼,메인탭,content,콘텐츠,탭 아이콘,이모지,,P3,
+UI심볼,메인탭,shop,상점,탭 아이콘,이모지,,P3,
+UI심볼,성급배지,star,성급(1~10),실버/골드 밴드,코드생성,,P2,
+UI스킨,A.공통프레임,ui_bg_main,화면 배경,1080x1920 PNG,그라디언트,,P2,9-slice:N / 속성 구역 5변주 가능
+UI스킨,A.공통프레임,ui_topbar,상단 자원바 프레임,≥720x120 PNG,플랫,,P2,9-slice:Y(좌우) / 세이프존 16px
+UI스킨,A.공통프레임,ui_tabbar,하단 메인 탭바 배경,1080x180 PNG,플랫,,P2,9-slice:Y / 5칸
+UI스킨,A.공통프레임,ui_tab_active,탭 선택 인디케이터,216x180 PNG,플랫,,P2,active 글로우
+UI스킨,A.공통프레임,ui_subtab,서브탭 바(세그먼트),≥600x96 PNG,플랫,,P2,9-slice:Y / active·idle 2상태
+UI스킨,A.공통프레임,ui_card,카드/패널 기본,≥300x200 PNG,플랫,,P2,9-slice:Y / 테두리 24px
+UI스킨,A.공통프레임,ui_card_hl,카드 강조,≥300x200 PNG,플랫,,P2,9-slice:Y / 골드 강조
+UI스킨,A.공통프레임,ui_panel_lock,잠긴 패널 오버레이,≥300x200 PNG,플랫,,P2,9-slice:Y / 자물쇠
+UI스킨,B.버튼입력,btn_default,버튼 기본(normal+pressed),≥240x88 PNG,플랫,,P2,9-slice:Y / 2상태
+UI스킨,B.버튼입력,btn_gold,버튼 골드 강조(normal+pressed),≥240x88 PNG,플랫,,P2,9-slice:Y / 2상태
+UI스킨,B.버튼입력,btn_ghost,버튼 고스트(normal+pressed),≥240x88 PNG,플랫,,P2,9-slice:Y / 2상태
+UI스킨,B.버튼입력,btn_small,소형 버튼(small·tiny),≥140x60 PNG,플랫,,P2,9-slice:Y
+UI스킨,B.버튼입력,ui_toggle,토글 스위치(track+knob),92x56 PNG,플랫,,P2,on/off 2상태
+UI스킨,B.버튼입력,ui_input,텍스트 입력칸 프레임,≥300x88 PNG,플랫,,P2,9-slice:Y
+UI스킨,B.버튼입력,ui_segment,배수 세그먼트(x1/x10/x100/Max),≥400x72 PNG,플랫,,P2,active·idle
+UI스킨,C.뱃지게이지,chip_rarity,등급 태그 칩(N~UR),≥120x48 PNG×5,코드생성,,P2,등급별 5색
+UI스킨,C.뱃지게이지,chip_power,전투력 칩 배경,≥160x56 PNG,플랫,,P2,9-slice:Y
+UI스킨,C.뱃지게이지,gauge_fill,진행 게이지(층·EXP·친밀도·씨앗),≥400x40 PNG,플랫,,P2,트랙+채움 텍스처 4종
+UI스킨,C.뱃지게이지,glyph_set,소형 글리프(잠금·체크·화살표·별·＋/－),64x64 PNG ×~10,이모지,,P3,단색/2색
+UI스킨,D.화면특수,stage_battle,전투 무대(3열 진형 배경),1080x1920 PNG,기본,,P5,타격 이펙트 별도
+UI스킨,D.화면특수,summon_ritual,소환진 배경,1080x1920 PNG,기본,,P5,
+UI스킨,D.화면특수,summon_glow,소환 결과 등급별 광(N~UR),전체화면 오버레이 ×5,기본,,P5,등급 연출
+UI스킨,D.화면특수,card_package,상점 패키지 카드,≥500x300 PNG,플랫,,P4,9-slice 부분
+UI스킨,D.화면특수,card_dungeon,던전 카드,≥500x220 PNG,플랫,,P4,
+UI스킨,D.화면특수,ui_calendar,출석 캘린더,그리드 세트,플랫,,P4,보상 슬롯
+UI스킨,D.화면특수,banner_event,이벤트 배너,≥1000x300 PNG,플랫,,P4,
+UI스킨,D.화면특수,detail_fullart,캐릭터 상세 풀아트 레이아웃,1080x1920 세트,목업,,P2,배너·스킬슬롯·스탯패널
+UI스킨,E.모달연출,modal_bg,모달 배경(설정/콘솔/팝업),≥800x600 PNG,플랫,,P2,9-slice:Y
+UI스킨,E.모달연출,bottomsheet,강화 바텀시트(그립·핸들),1080x1200 PNG,플랫,,P2,상단 그립
+UI스킨,E.모달연출,popup_notice,공지 팝업 프레임,≥760x520 PNG,플랫,,P2,9-slice:Y
+UI스킨,E.모달연출,onboarding,온보딩 일러스트,1080x1080 ×3~5,없음,,P4,첫 실행
+UI스킨,F.브랜드,app_icon,앱 아이콘,1024x1024 PNG,있음,,완료,
+UI스킨,F.브랜드,splash,스플래시,1284x2778 PNG,있음,,완료,
+UI스킨,F.브랜드,logo_title,로고·타이틀,벡터/PNG,없음,,P4,
+UI스킨,F.브랜드,loading,로딩 스피너,256x256 시퀀스,기본,,P4,

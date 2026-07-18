@@ -1,0 +1,62 @@
+﻿분류,세부타입,ID,이름,규격,현재상태,파일경로/키,우선순위,비고
+캐릭터,초상,kael,카엘,512x512 PNG,등록됨,assets/char/fantasy/kael.png,P1,불꽃의 검사
+캐릭터,초상,luna,루나,512x512 PNG,등록됨,assets/char/fantasy/luna.png,P1,달빛 성녀
+캐릭터,초상,gwen,그웬,512x512 PNG,등록됨,assets/char/fantasy/gwen.png,P1,서리 수호기사
+캐릭터,초상,ciel,시엘,512x512 PNG,등록됨,assets/char/fantasy/ciel.png,P1,바람의 무희
+캐릭터,초상,bran,브란,512x512 PNG,등록됨,assets/char/fantasy/bran.png,P1,대지의 방패
+캐릭터,초상,ael,아엘,512x512 PNG,등록됨,assets/char/fantasy/ael.png,P1,빛의 예언자
+캐릭터,초상,ara,아라,512x512 PNG,등록됨,assets/char/fantasy/ara.png,P1,폭풍검
+캐릭터,초상,mir,미르,512x512 PNG,등록됨,assets/char/fantasy/mir.png,P1,견습 검사
+캐릭터,초상,pyra,피라,512x512 PNG,등록됨,assets/char/fantasy/pyra.png,P1,홍염의 방벽
+캐릭터,초상,frost,프로스트,512x512 PNG,등록됨,assets/char/fantasy/frost.png,P1,빙하의 자객
+캐릭터,초상,marina,마리나,512x512 PNG,등록됨,assets/char/fantasy/marina.png,P1,조수의 치유사
+캐릭터,초상,signe,시그네,512x512 PNG,등록됨,assets/char/fantasy/signe.png,P1,전열의 고수병
+캐릭터,초상,aurel,아우렐,512x512 PNG,등록됨,assets/char/fantasy/aurel.png,P1,여명의 성검사
+캐릭터,초상,nyx,닉스,512x512 PNG,등록됨,assets/char/fantasy/nyx.png,P1,심연의 대예언자
+캐릭터,초상,kai,카이,512x512 PNG,필요,assets/char/fantasy/kai.png,P1,풋내기 도둑
+캐릭터,초상,vera,베라,512x512 PNG,필요,assets/char/fantasy/vera.png,P1,칠흑의 자객
+캐릭터,초상,robin,로빈,512x512 PNG,필요,assets/char/fantasy/robin.png,P1,숲의 궁수
+캐릭터,초상,sylas,사일러스,512x512 PNG,필요,assets/char/fantasy/sylas.png,P1,빛의 궁성
+캐릭터,초상,elara,엘라라,512x512 PNG,필요,assets/char/fantasy/elara.png,P1,화염 마도사
+캐릭터,초상,oriel,오리엘,512x512 PNG,필요,assets/char/fantasy/oriel.png,P1,혼돈의 대마도사
+캐릭터,초상,toren,토렌,512x512 PNG,필요,assets/char/fantasy/toren.png,P1,풋내기 방패병
+캐릭터,초상,kordan,코르단,512x512 PNG,필요,assets/char/fantasy/kordan.png,P1,화염 성벽
+캐릭터,초상,ymir,이미르,512x512 PNG,필요,assets/char/fantasy/ymir.png,P1,빙하 거인
+캐릭터,초상,nella,넬라,512x512 PNG,필요,assets/char/fantasy/nella.png,P1,견습 사제
+캐릭터,초상,jax,잭스,512x512 PNG,필요,assets/char/fantasy/jax.png,P1,뒷골목 칼잡이
+캐릭터,초상,mira,미라,512x512 PNG,필요,assets/char/fantasy/mira.png,P1,안개 자객
+캐릭터,초상,raven,레이븐,512x512 PNG,필요,assets/char/fantasy/raven.png,P1,심연의 그림자
+캐릭터,초상,finn,핀,512x512 PNG,필요,assets/char/fantasy/finn.png,P1,견습 사냥꾼
+캐릭터,초상,lyra,리라,512x512 PNG,필요,assets/char/fantasy/lyra.png,P1,달빛 궁수
+캐릭터,초상,seren,세렌,512x512 PNG,필요,assets/char/fantasy/seren.png,P1,천공의 대궁수
+캐릭터,초상,pip,핍,512x512 PNG,필요,assets/char/fantasy/pip.png,P1,견습 마법사
+캐릭터,초상,thalia,탈리아,512x512 PNG,필요,assets/char/fantasy/thalia.png,P1,빙결 마도사
+캐릭터,초상,nocturne,녹턴,512x512 PNG,필요,assets/char/fantasy/nocturne.png,P1,칠흑의 대현자
+UI심볼,등급프레임,N,N 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,등급프레임,R,R 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,등급프레임,SR,SR 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,등급프레임,SSR,SSR 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,등급프레임,UR,UR 등급,카드 테두리,목업,,P2,9-slice
+UI심볼,성급배지,star,성급(1~10),실버/골드 밴드,코드생성,,P2,
+UI스킨,A.공통프레임,ui_bg_main,화면 배경,1080x1920 PNG,그라디언트,,P2,9-slice:N / 속성 구역 5변주 가능
+UI스킨,A.공통프레임,ui_topbar,상단 자원바 프레임,≥720x120 PNG,플랫,,P2,9-slice:Y(좌우) / 세이프존 16px
+UI스킨,A.공통프레임,ui_tabbar,하단 메인 탭바 배경,1080x180 PNG,플랫,,P2,9-slice:Y / 5칸
+UI스킨,A.공통프레임,ui_tab_active,탭 선택 인디케이터,216x180 PNG,플랫,,P2,active 글로우
+UI스킨,A.공통프레임,ui_subtab,서브탭 바(세그먼트),≥600x96 PNG,플랫,,P2,9-slice:Y / active·idle 2상태
+UI스킨,A.공통프레임,ui_card,카드/패널 기본,≥300x200 PNG,플랫,,P2,9-slice:Y / 테두리 24px
+UI스킨,A.공통프레임,ui_card_hl,카드 강조,≥300x200 PNG,플랫,,P2,9-slice:Y / 골드 강조
+UI스킨,A.공통프레임,ui_panel_lock,잠긴 패널 오버레이,≥300x200 PNG,플랫,,P2,9-slice:Y / 자물쇠
+UI스킨,B.버튼입력,btn_default,버튼 기본(normal+pressed),≥240x88 PNG,플랫,,P2,9-slice:Y / 2상태
+UI스킨,B.버튼입력,btn_gold,버튼 골드 강조(normal+pressed),≥240x88 PNG,플랫,,P2,9-slice:Y / 2상태
+UI스킨,B.버튼입력,btn_ghost,버튼 고스트(normal+pressed),≥240x88 PNG,플랫,,P2,9-slice:Y / 2상태
+UI스킨,B.버튼입력,btn_small,소형 버튼(small·tiny),≥140x60 PNG,플랫,,P2,9-slice:Y
+UI스킨,B.버튼입력,ui_toggle,토글 스위치(track+knob),92x56 PNG,플랫,,P2,on/off 2상태
+UI스킨,B.버튼입력,ui_input,텍스트 입력칸 프레임,≥300x88 PNG,플랫,,P2,9-slice:Y
+UI스킨,B.버튼입력,ui_segment,배수 세그먼트(x1/x10/x100/Max),≥400x72 PNG,플랫,,P2,active·idle
+UI스킨,C.뱃지게이지,chip_rarity,등급 태그 칩(N~UR),≥120x48 PNG×5,코드생성,,P2,등급별 5색
+UI스킨,C.뱃지게이지,chip_power,전투력 칩 배경,≥160x56 PNG,플랫,,P2,9-slice:Y
+UI스킨,C.뱃지게이지,gauge_fill,진행 게이지(층·EXP·친밀도·씨앗),≥400x40 PNG,플랫,,P2,트랙+채움 텍스처 4종
+UI스킨,D.화면특수,detail_fullart,캐릭터 상세 풀아트 레이아웃,1080x1920 세트,목업,,P2,배너·스킬슬롯·스탯패널
+UI스킨,E.모달연출,modal_bg,모달 배경(설정/콘솔/팝업),≥800x600 PNG,플랫,,P2,9-slice:Y
+UI스킨,E.모달연출,bottomsheet,강화 바텀시트(그립·핸들),1080x1200 PNG,플랫,,P2,상단 그립
+UI스킨,E.모달연출,popup_notice,공지 팝업 프레임,≥760x520 PNG,플랫,,P2,9-slice:Y

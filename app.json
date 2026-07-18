@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "엘드리아 연대기",
+    "slug": "eldria-idle",
+    "version": "1.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "scheme": "eldria",
+    "primaryColor": "#f5c542",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1b1430"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 0,
+      "checkAutomatically": "ON_LOAD",
+      "url": "https://u.expo.dev/f95f8fe3-12c4-43ac-8c6c-e3d0cb60e8c5"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.eldria.idle",
+      "buildNumber": "2"
+    },
+    "android": {
+      "package": "com.eldria.idle",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1b1430"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "concept": "fantasy",
+      "eas": {
+        "projectId": "f95f8fe3-12c4-43ac-8c6c-e3d0cb60e8c5"
+      }
+    },
+    "owner": "gimax77"
+  }
+}
