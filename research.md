@@ -59,5 +59,13 @@
 - 검증: esbuild 문법 OK(양파일), import 삽입·잔존 import 0·중복정의 0 확인. expo export 재빌드→실구동: 영웅 화면 정상(상세탭 육성/장비/스킬/꾸미기=DETAIL_TABS, 로스터탭=ROSTER_TABS, 스탯아이콘=statIcon, "전투력375→420 ▲+45"=DeltaText 모두 정상), 콘솔에러 0. 코어테스트 279 pass·0 fail.
 - 결과: 커밋 17b01aa. 동작 불변 순수 정리 완료. 후속 분해 후보: 상태 얽힌 하위패널(장비/룬/스킬)은 프롭 스레딩 필요해 별도 신중 작업.
 
+## 2026-07-18 — B1 토큰 적용확대 + B4 온보딩 리스타일
+- 요청: B1 토큰 화면 적용확대 + B4 온보딩 리디자인.
+- B1: 공용 Card(app/components.js)가 iOS shadow만 있고 Android elevation 누락→모바일 카드 평평. ELEV.card 토큰(elevation 포함)으로 교체 + borderRadius→RADIUS.xl. 전 화면 카드 한 번에 깊이감. 커밋 d9e1e82.
+- B4: Onboarding.js의 IntroModal/ObjectiveBanner 스타일을 토큰(FONT/RADIUS/WEIGHT/ELEV/SPACE)으로 통일 + 소개카드 ELEV.modal·배너 ELEV.card 깊이. 로직·슬라이드 불변(순수 스타일). 커밋 1a80dfc.
+- 검증: esbuild 문법 OK, expo export 재빌드, 실구동—앱 부팅·콘솔에러0, 온보딩 모달 리스타일 렌더·뒤 카드 정상. 시각 깊이(그림자/elevation)는 기기/Gim화면에서 확인.
+- 발견(제 변경 무관): 코어 테스트 1개가 플래키(무작위 의존)—간헐 실패. 4회 재실행 중 1회만 fail, 나머지 279 pass·0 fail. 지시 없이 수정 안 함, 발견만 기록.
+- 결과: B1·B4 완료. 남은 코드후보: 화면별 토큰 추가적용(점진), B5 마이크로인터랙션, 로스터 2차분해. 아트(A1~3)·서버(C3)는 Gim 환경.
+
 
 
