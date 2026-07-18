@@ -109,3 +109,10 @@
 - P0 핵심 발견: 모듈 on/off가 코드에 거의 미구현. isOn() 코어 로직 게이트 보유 모듈 = 18개 중 2개(elements 2파일·rarity 1파일)뿐. 나머지 16개(gacha/gear/runes/relics/emblems/pets/guardians/costumes/arena/guild/tower/expedition/season/events/intimacy/shop) 코어 게이트 0 → FEATURES 플래그가 대부분 UI탭만 숨기고 로직은 그대로 돔(relics:false여도 파워 합산됨). redesign-plan 단계2~5 미완.
 - 제언 갱신: 🔴P0 모듈 게이팅 프레임워크 완성(각 모듈 로직·파워·상태·UI 게이트 4종). 🟡중복축은 파라미터화 통합. 🟡전투스탯 묶음 옵션화. 🟢프리셋 정의.
 - 결과: docs/SYSTEM_AUDIT.md 재구성(0.5 재구성·P0 추가, 결론 갱신). 코드 무변경. 다음: P0 게이팅 착수 여부 Gim 결정.
+
+## 2026-07-19 — P0 파일럿: relics 완전 옵션화 + 게이팅 패턴 문서화
+- 요청: P0 착수 = 파일럿 1개 먼저.
+- 파일럿=relics(계정 파워, 게이트 지점 명확). 4게이트: (a)upgradeRelic off면 차단 (b)relicMods off면 중립(1,1,1)→accountMods 파워/수입 기여 제거 (c)state.relics 보존(재활성시 복원) (d)GrowthPanel 유물섹션 isOn('relics') 래핑. elements/rarity 조기반환 패턴 복제.
+- 검증: relics.test.mjs 신설(on 기여/off 중립·차단·보존) FEATURES.relics 토글 try/finally 복원. 2 pass, 전체 281 pass·0 fail(오염 없음), GrowthPanel esbuild OK. 커밋 acbdeec.
+- 문서: docs/MODULE_GATING.md — 4게이트 표준·relics 워크드 예제·검증규약·16모듈 체크리스트. 주의: intimacy off→씨앗 bond조건, sigweapon off→oath조건 연쇄(seed.mjs). gear는 핵심축이라 후순위·신중.
+- 결과: 파일럿 완료. 패턴 확정. 다음: 나머지 모듈 확장(emblems/guardians/pets가 relics와 동형이라 빠름) 여부 Gim 결정.
