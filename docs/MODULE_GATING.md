@@ -50,9 +50,9 @@ export function upgradeRelic(state, id) {
 | 모듈 | (a)로직 | (b)파워/효과 | (c)상태 | (d)UI | 테스트 | 기여 진입점(메모) |
 |---|:--:|:--:|:--:|:--:|:--:|---|
 | relics | ✅ | ✅ | ✅ | ✅ | ✅ | `relicMods` → accountMods |
-| emblems | ☐ | ☐ | ☐ | ☐ | ☐ | `emblemMods` → accountMods |
-| guardians | ☐ | ☐ | ☐ | ☐ | ☐ | `guardianMods` → accountMods |
-| pets | ☐ | ☐ | ☐ | ☐ | ☐ | `petMods` → accountMods |
+| emblems | ✅ | ✅ | ✅ | ✅ | ✅ | `emblemMods` → accountMods |
+| guardians | ✅ | ✅ | ✅ | ✅ | ✅ | `guardianMods` → accountMods |
+| pets | ✅ | ✅ | ✅ | ✅ | ✅ | `petMods` → accountMods |
 | runes | ☐ | ☐ | ☐ | ☐ | ☐ | 유닛 modifiers + `runeAccount?` |
 | sigweapon | ☐ | ☐ | ☐ | ☐ | ☐ | 유닛 modifiers |
 | gear | ☐ | ☐ | ☐ | ☐ | ☐ | 유닛 modifiers(핵심 축 — 신중) |

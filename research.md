@@ -116,3 +116,9 @@
 - 검증: relics.test.mjs 신설(on 기여/off 중립·차단·보존) FEATURES.relics 토글 try/finally 복원. 2 pass, 전체 281 pass·0 fail(오염 없음), GrowthPanel esbuild OK. 커밋 acbdeec.
 - 문서: docs/MODULE_GATING.md — 4게이트 표준·relics 워크드 예제·검증규약·16모듈 체크리스트. 주의: intimacy off→씨앗 bond조건, sigweapon off→oath조건 연쇄(seed.mjs). gear는 핵심축이라 후순위·신중.
 - 결과: 파일럿 완료. 패턴 확정. 다음: 나머지 모듈 확장(emblems/guardians/pets가 relics와 동형이라 빠름) 여부 Gim 결정.
+
+## 2026-07-19 — P0 확장: emblems·guardians·pets 옵션화(동형 3개)
+- 계정 파워 3축을 relics 4게이트 패턴으로 게이팅. (b)emblemMods/guardianMods/petMods off면 중립(1,1,1)→accountMods 기여 제거. (a)upgradeEmblem·guardianSummon·petSummon off면 차단. (c)상태 보존. (d)GrowthPanel 펫/유물/엠블럼/정령 4섹션 isOn() 래핑(유물 포함).
+- 검증: module-gating.test.mjs 신설(emblems on기여+off중립·차단·보존, guardians/pets off중립·차단) 3 pass. 전체 285개 중 284 pass·0 fail(FEATURES 토글 try/finally 복원, 오염 없음). GrowthPanel esbuild OK, expo 재빌드→웹 부팅·콘솔에러0. 커밋 5a4281e.
+- 진행: 게이팅 완료 6/18 (relics·emblems·guardians·pets + 기존 elements·rarity). MODULE_GATING.md 체크리스트 갱신.
+- 남음: 유닛축(runes/sigweapon/gear-신중), 콘텐츠(arena/guild/tower/season/events), summon/costumes/intimacy/shop. intimacy/sigweapon off는 씨앗 bond/oath 연쇄 점검 필요.
