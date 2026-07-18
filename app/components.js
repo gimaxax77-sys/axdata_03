@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, Animated } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { T, rarityMeta, SPACE } from './theme';
+import { T, rarityMeta, SPACE, RADIUS, ELEV } from './theme';
 import { fx } from './feedback';
 import { reducedMotion } from './motion';
 import { isOn } from '../system/core/features.mjs';
@@ -361,7 +361,7 @@ const s = StyleSheet.create({
   glowGoldSmall: { shadowColor: T.accent, shadowOpacity: 0.28, shadowRadius: 4, shadowOffset: { width: 0, height: 1 } },
   glowPrimarySmall: { shadowColor: T.primary, shadowOpacity: 0.24, shadowRadius: 4, shadowOffset: { width: 0, height: 1 } },
   // 미니멀 정리 1단계: 패딩 16→12(SPACE.md), 그림자를 옅게(카드가 덜 "떠 보이게").
-  card: { borderRadius: 16, padding: SPACE.md, borderWidth: 1, borderColor: T.line, overflow: 'hidden', backgroundColor: T.surface, shadowColor: '#000', shadowOpacity: 0.16, shadowRadius: 6, shadowOffset: { width: 0, height: 2 } },
+  card: { borderRadius: RADIUS.xl, padding: SPACE.md, borderWidth: 1, borderColor: T.line, overflow: 'hidden', backgroundColor: T.surface, ...ELEV.card },
   // 내용 크기로 컴팩트하게 — 셀에 flex:1이면 네이티브에서 부모 폭 전체로 늘어남(웹과 차이).
   multi: { flexDirection: 'row', backgroundColor: T.surface2, borderRadius: 10, padding: 3, gap: 3 },
   multiCell: { minWidth: 40, alignItems: 'center', paddingVertical: 6, paddingHorizontal: 8, borderRadius: 8 },
