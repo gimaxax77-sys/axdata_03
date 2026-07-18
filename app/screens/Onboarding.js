@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Modal, TouchableOpacity } from 'react-native';
-import { T } from '../theme';
+import { T, SPACE, RADIUS, FONT, WEIGHT, ELEV } from '../theme';
 import { Btn } from '../components';
 import { nextObjective } from '../../system/core/tutorial.mjs';
 import { unlockStage } from '../../system/core/unlocks.mjs';
@@ -70,17 +70,18 @@ export function ObjectiveBanner({ state, concept, onGo }) {
 }
 
 const c = StyleSheet.create({
-  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.7)', alignItems: 'center', justifyContent: 'center', padding: 28 },
-  card: { backgroundColor: T.surface, borderRadius: 22, padding: 26, alignItems: 'center', borderWidth: 1, borderColor: T.accent, width: '100%', maxWidth: 360 },
-  emoji: { fontSize: 60 },
-  title: { color: T.text, fontWeight: '900', fontSize: 20, marginTop: 10, textAlign: 'center' },
-  body: { color: T.muted, fontSize: 14, lineHeight: 21, marginTop: 12, textAlign: 'center' },
-  dots: { flexDirection: 'row', gap: 7, marginVertical: 18 },
-  dot: { width: 8, height: 8, borderRadius: 4, backgroundColor: T.surface2 },
+  backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.72)', alignItems: 'center', justifyContent: 'center', padding: SPACE.xl + 8 },
+  // 소개 카드 — 토큰 기반 + 모달 깊이(그림자). 강조 테두리 유지.
+  card: { backgroundColor: T.surface, borderRadius: RADIUS.xl + 6, padding: SPACE.xl + 6, alignItems: 'center', borderWidth: 1, borderColor: T.accent, width: '100%', maxWidth: 360, ...ELEV.modal },
+  emoji: { fontSize: FONT.giant, marginBottom: SPACE.xs },
+  title: { color: T.text, fontWeight: WEIGHT.black, fontSize: FONT.head, marginTop: SPACE.sm, textAlign: 'center' },
+  body: { color: T.muted, fontSize: FONT.label, lineHeight: 22, marginTop: SPACE.md, textAlign: 'center' },
+  dots: { flexDirection: 'row', gap: 7, marginVertical: SPACE.lg },
+  dot: { width: 8, height: 8, borderRadius: RADIUS.sm, backgroundColor: T.surface2 },
   dotOn: { backgroundColor: T.accent, width: 20 },
-  skip: { marginTop: 12, padding: 6 },
-  skipText: { color: T.muted, fontSize: 13, fontWeight: '600' },
-  banner: { flexDirection: 'row', alignItems: 'center', backgroundColor: T.surface, borderRadius: 12, borderWidth: 1, borderColor: T.accent, paddingHorizontal: 14, paddingVertical: 10, marginHorizontal: 14, marginBottom: 4 },
-  bannerText: { color: T.text, fontSize: 13, fontWeight: '700', flex: 1, lineHeight: 18 },
-  bannerGo: { color: T.accent, fontSize: 22, fontWeight: '800', marginLeft: 8 },
+  skip: { marginTop: SPACE.md, padding: SPACE.xs + 2 },
+  skipText: { color: T.muted, fontSize: FONT.sub, fontWeight: WEIGHT.medium },
+  banner: { flexDirection: 'row', alignItems: 'center', backgroundColor: T.surface, borderRadius: RADIUS.lg, borderWidth: 1, borderColor: T.accent, paddingHorizontal: SPACE.lg - 2, paddingVertical: SPACE.md - 2, marginHorizontal: SPACE.lg - 2, marginBottom: SPACE.xs, ...ELEV.card },
+  bannerText: { color: T.text, fontSize: FONT.sub, fontWeight: WEIGHT.bold, flex: 1, lineHeight: 18 },
+  bannerGo: { color: T.accent, fontSize: FONT.head, fontWeight: WEIGHT.heavy, marginLeft: SPACE.sm },
 });
