@@ -1,4 +1,5 @@
 import { getStage } from './progression.mjs';
+import { isOn } from './features.mjs';
 import { resolve } from './resolution.mjs';
 import { getPartyUnits } from './gameState.mjs';
 import { accountMods } from './balance.mjs';
@@ -29,6 +30,7 @@ export function towerReward(floor) {
 
 // 현재 층 도전. 승리 시 보상 + 전진.
 export function climbTower(state) {
+  if (!isOn('tower')) return { ok: false, reason: '무한의 탑 비활성' }; // 옵션 off → 콘텐츠 차단
   const floor = (state.tower && state.tower.floor) || 1;
   const party = getPartyUnits(state);
   if (!party.length) return { ok: false, reason: '파티 없음' };

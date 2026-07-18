@@ -1,4 +1,5 @@
 import { toCombatProfile } from './units.mjs';
+import { isOn } from './features.mjs';
 import { accountMods } from './balance.mjs';
 import { getStage } from './progression.mjs';
 import { getPartyUnits } from './gameState.mjs';
@@ -46,6 +47,7 @@ export function guildAttacksLeft(state, now = Date.now()) {
 
 // 한 번 공격. 누적 피해를 보스 HP에서 깎고, 처치 시 티어업 + 보너스.
 export function guildAttack(state, now = Date.now()) {
+  if (!isOn('guild')) return { ok: false, reason: '길드 비활성' }; // 옵션 off → 콘텐츠 차단
   if (guildAttacksLeft(state, now) <= 0) return { ok: false, reason: '오늘 공격 소진' };
   state.guild.attacks += 1;
   const dmg = Math.round(partyDpsEff(state) * ATTACK_SECONDS);

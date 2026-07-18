@@ -4,6 +4,7 @@ import { T } from '../theme';
 import { Card, Btn, fmt, MultiToggle, multLabel, repeat, pctW } from '../components';
 import { CodeTag } from '../uicode';
 import { isUnlocked, unlockStage } from '../../system/core/unlocks.mjs';
+import { isOn } from '../../system/core/features.mjs';
 import { ARENA_ENTRIES, arenaEntriesLeft, arenaFight, arenaInfo, ladderInfo } from '../../system/core/arena.mjs';
 import { GUILD_ATTACKS, guildAttacksLeft, guildAttack, guildBossMaxHp } from '../../system/core/guild.mjs';
 import { COMP_SHOP, compPurchase, compGrantPreview } from '../../system/core/compshop.mjs';
@@ -81,6 +82,7 @@ export default function ArenaGuildScreen({ state, bump, concept, embedded }) {
       {/* 우편함은 상단 우편 아이콘(전역)으로 이동 — MailboxModal */}
 
       {/* ── 아레나 ───────────────────────────────── */}
+      {isOn('arena') && (
       <Card>
         <CodeTag id="m1" corner="tl" />
         <View style={c.head}>
@@ -122,8 +124,10 @@ export default function ArenaGuildScreen({ state, bump, concept, embedded }) {
           <CompShop state={state} bump={bump} concept={concept} kind="arena" balance={state.arena.points} unit="🏅" />
         </>)}
       </Card>
+      )}
 
       {/* ── 무한의 탑 ─────────────────────────────── */}
+      {isOn('tower') && (
       <Card style={{ marginTop: 12 }}>
         <CodeTag id="m2" corner="tl" />
         <View style={c.head}>
@@ -150,8 +154,10 @@ export default function ArenaGuildScreen({ state, bump, concept, embedded }) {
           <Btn label={`${state.tower.floor}층 도전`} kind="gold" sfx={false} onPress={doTower} />
         </>)}
       </Card>
+      )}
 
       {/* ── 길드 보스 ─────────────────────────────── */}
+      {isOn('guild') && (
       <Card style={{ marginTop: 12, marginBottom: 24 }}>
         <CodeTag id="m3" corner="tl" />
         <View style={c.head}>
@@ -181,6 +187,7 @@ export default function ArenaGuildScreen({ state, bump, concept, embedded }) {
           <CompShop state={state} bump={bump} concept={concept} kind="guild" balance={state.guild.coins} unit="🎖️" />
         </>)}
       </Card>
+      )}
     </Container>
   );
 }

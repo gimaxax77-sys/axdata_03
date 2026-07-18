@@ -1,4 +1,5 @@
 import { earn } from './economy.mjs';
+import { isOn } from './features.mjs';
 import { addMail } from './mailbox.mjs';
 import { getPartyUnits } from './gameState.mjs';
 import { resolve } from './resolution.mjs';
@@ -66,6 +67,7 @@ export function seasonInfo(state, now = Date.now()) {
 
 // 다음 층 도전 — 평준화 조건에서 판정. 승리 시 층+1·점수 갱신, 보상 지급.
 export function seasonChallenge(state, now = Date.now()) {
+  if (!isOn('season')) return { ok: false, reason: '시즌 비활성' }; // 옵션 off → 콘텐츠 차단
   const s = ensure(state, now);
   if (s.floor >= SEASON_FLOORS) return { ok: false, reason: '최고 층 도달' };
   const party = getPartyUnits(state);

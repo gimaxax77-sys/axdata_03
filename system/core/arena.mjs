@@ -1,4 +1,5 @@
 import { computePower } from './stats.mjs';
+import { isOn } from './features.mjs';
 import { accountMods } from './balance.mjs';
 import { getStage } from './progression.mjs';
 import { earn } from './economy.mjs';
@@ -135,6 +136,7 @@ export function arenaEntriesLeft(state, now = Date.now()) {
 
 // 한 판 대전. 상대는 "같은 리그 + 공정 밴드"로 생성하며, 내 전투력의 1.12배를 넘지 않는다.
 export function arenaFight(state, rng = Math.random, now = Date.now()) {
+  if (!isOn('arena')) return { ok: false, reason: '아레나 비활성' }; // 옵션 off → 콘텐츠 차단
   if (arenaEntriesLeft(state, now) <= 0) return { ok: false, reason: '오늘 입장 소진' };
   state.arena.entries += 1;
 

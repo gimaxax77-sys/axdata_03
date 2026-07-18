@@ -165,6 +165,8 @@ export default function ContentScreen({ state, bump, concept }) {
   //   가챠 연출과 동일 규약(Animated.timing · useNativeDriver · stagger delay).
   //   연출끔/절전이면 즉시 완료 상태로 렌더(발열·접근성).
   const anims = useRef(SUBTABS.map(() => new Animated.Value(0))).current;
+  // 옵션 off 모듈의 서브탭 숨김(경쟁=arena/tower/guild, 이벤트=events/season).
+  const subtabs = SUBTABS.filter((tb) => tb.key === 'arena' ? (isOn('arena') || isOn('tower') || isOn('guild')) : tb.key === 'event' ? (isOn('events') || isOn('season')) : true);
   useEffect(() => {
     if (reducedMotion()) { anims.forEach((a) => a.setValue(1)); return; }
     anims.forEach((a) => a.setValue(0));
@@ -240,6 +242,7 @@ export default function ContentScreen({ state, bump, concept }) {
       )}
 
       {grp === 'event' && (<>
+      {isOn('events') && (<>
       {/* 주간 테마 이벤트(미니 로드맵) */}
       <Card style={{ marginTop: 12, borderColor: T.accent }}>
         <CodeTag id="l1" corner="tl" />
@@ -251,7 +254,9 @@ export default function ContentScreen({ state, bump, concept }) {
         <Btn kind={wev.done && !wev.claimed ? 'gold' : 'ghost'} disabled={!wev.done || wev.claimed}
           label={wev.claimed ? '이번 주 수령 완료' : wev.done ? '🎁 보상 받기' : '목표 진행 중'} onPress={doClaimWeekly} />
       </Card>
+      </>)}
 
+      {isOn('season') && (<>
       {/* 시즌 소프트리셋 던전(평준화 랭킹) */}
       <Card style={{ marginTop: 12 }}>
         <CodeTag id="l2" corner="tl" />
@@ -262,6 +267,7 @@ export default function ContentScreen({ state, bump, concept }) {
         <View style={{ height: 8 }} />
         <Btn kind="gold" disabled={sInfo.floor >= SEASON_FLOORS} label={sInfo.floor >= SEASON_FLOORS ? '최고 층 달성' : `${sInfo.floor + 1}층 도전`} onPress={doSeasonFight} />
       </Card>
+      </>)}
       </>)}
 
       {grp === 'daily' && (<>
@@ -394,7 +400,7 @@ export default function ContentScreen({ state, bump, concept }) {
 
     {/* 하단 서브탭 바 — 메인 탭바 바로 위. 콘텐츠 진입 시 좌→우로 차르륵 펼쳐진다. */}
     <View style={c.subbar}>
-      {SUBTABS.map((tb, i) => {
+      {subtabs.map((tb, i) => {
         const on = grp === tb.key;
         return (
           <Animated.View key={tb.key} style={{

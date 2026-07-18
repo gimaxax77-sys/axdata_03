@@ -7,6 +7,11 @@ import { earn } from '../core/economy.mjs';
 import { emblemMods, upgradeEmblem } from '../core/emblems.mjs';
 import { guardianMods, guardianSummon } from '../core/guardians.mjs';
 import { petMods, petSummon } from '../core/pets.mjs';
+import { arenaFight } from '../core/arena.mjs';
+import { guildAttack } from '../core/guild.mjs';
+import { climbTower } from '../core/tower.mjs';
+import { seasonChallenge } from '../core/season.mjs';
+import { claimWeekly } from '../core/events.mjs';
 
 const NEUTRAL = { power: 1, currency: 1, growth: 1 };
 
@@ -42,4 +47,20 @@ test('pets: OFF 중립·차단', () => {
     assert.deepEqual(petMods(s), NEUTRAL, 'OFF면 중립');
     assert.equal(petSummon(s, () => 0).ok, false, 'OFF면 소환 차단');
   } finally { FEATURES.pets = true; }
+});
+
+test('콘텐츠 OFF: 액션 차단 (arena/guild/tower/season/events)', () => {
+  const s = createGameState({ units: [], party: [] });
+  const checks = [
+    ['arena', () => arenaFight(s, () => 0)],
+    ['guild', () => guildAttack(s)],
+    ['tower', () => climbTower(s)],
+    ['season', () => seasonChallenge(s)],
+    ['events', () => claimWeekly(s)],
+  ];
+  for (const [key, fn] of checks) {
+    FEATURES[key] = false;
+    try { assert.equal(fn().ok, false, `${key} OFF면 액션 차단`); }
+    finally { FEATURES[key] = true; }
+  }
 });

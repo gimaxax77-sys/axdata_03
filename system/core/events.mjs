@@ -1,4 +1,5 @@
 import { earn } from './economy.mjs';
+import { isOn } from './features.mjs';
 
 // ─────────────────────────────────────────────────────────────
 // 상시 순환형 '미니 로드맵' 주간 테마 이벤트.
@@ -57,6 +58,7 @@ export function weeklyEvent(state, now = Date.now()) {
 
 // 보상 청구(주 1회) — 지갑 재화 지급.
 export function claimWeekly(state, now = Date.now()) {
+  if (!isOn('events')) return { ok: false, reason: '이벤트 비활성' }; // 옵션 off → 콘텐츠 차단
   const e = ensure(state, now);
   const theme = currentTheme(now);
   if (e.claimed) return { ok: false, reason: '이번 주 이미 수령' };
