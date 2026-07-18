@@ -78,5 +78,11 @@
 - 로스터 2차 분해: RosterScreen 본문 분석 결과 useState 13개+애니 useEffect+파생데이터+클로저 6개가 얽혀, 패널 추출은 prop 십수개 스레딩 필요·전수 검증 불가. D2에서 성능이유도 없음 → 고위험·저보상. Gim과 협의해 **패스** 결정. 1차(순수함수) 안전분리로 이미 충분.
 - 결과: D2·2차분해 판단 완료(둘 다 코드 무변경). 남은 실작업 대부분이 Gim 환경(아트 A1~3 GPU·서버 C3) 또는 저가치. 다음: 아트 배선/가이드 준비가 최대 레버.
 
+## 2026-07-18 — A1 아트 배선 점검: 이미 완료
+- 점검: unitSprites.js에 fantasy 21키(idle/attack/hit/walk) 등록, assets/units/fantasy 21폴더×4PNG=84개 완비. IdleScreen이 {cid:concept.id, key:u.characterId}로 파이터 생성 → 로스터 21 id와 스프라이트 키 정확히 일치. 간극 0.
+- 결론: **A1(판타지 3D 스프라이트 게임 반영)은 이미 100% 완료.** 새로 배선할 렌더 없음. SF(scifi)만 유닛 스프라이트 없어 이모지 폴백(SF 출시 시에만 필요).
+- 배선 계약: assets/units/<concept>/<key>/<key>_<state>.png(가로16프레임 128²). 재렌더를 같은 경로에 덮어쓰면 코드 무수정 반영(Metro 정적 require라 목록은 명시적). 새 캐릭터 추가 시에만 unitSprites.js에 1줄.
+- 결과: docs/ART_A1_STATUS.md 작성(현황표+자동배선계약+A2 재렌더 흐름+SF 간극). A2/A3는 Gim PC 렌더(코드 무관, 에셋 덮어쓰기+재빌드). 헛작업 안 만들고 정직 보고.
+
 
 
