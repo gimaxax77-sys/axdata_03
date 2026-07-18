@@ -23,6 +23,7 @@ import RosterScreen from './app/screens/RosterScreen';
 import GachaScreen from './app/screens/GachaScreen';
 import ContentScreen from './app/screens/ContentScreen';
 import ShopScreen from './app/screens/ShopScreen';
+import RunScreen from './app/screens/RunScreen';
 import { IntroModal } from './app/screens/Onboarding';
 import ErrorBoundary from './app/ErrorBoundary';
 import { canClaimAttendance, missionList } from './system/core/daily.mjs';
@@ -38,6 +39,7 @@ const ALL_TABS = [
   { key: 'idle', label: '전투', icon: '🏰', Screen: React.memo(IdleScreen) },
   { key: 'roster', label: '영웅', icon: '🦸', Screen: React.memo(RosterScreen) },
   { key: 'gacha', label: '소환', icon: '🔮', Screen: React.memo(GachaScreen), feat: 'gacha' },
+  { key: 'expedition', label: '원정', icon: '⚔️', Screen: React.memo(RunScreen), feat: 'expedition' },
   { key: 'content', label: '콘텐츠', icon: '📅', Screen: React.memo(ContentScreen) },
   { key: 'shop', label: '상점', icon: '🛒', Screen: React.memo(ShopScreen), feat: 'shop' },
 ];
