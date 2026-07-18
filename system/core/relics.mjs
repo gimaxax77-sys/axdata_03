@@ -1,4 +1,5 @@
 import { spend } from './economy.mjs';
+import { isOn } from './features.mjs';
 
 // ─────────────────────────────────────────────────────────────
 // 유물(Relic) — 계정 단위 영구 성장. 환생 배수와 함께 accountMods로 합산된다.
@@ -35,6 +36,7 @@ export function relicUpgradeCost(level) {
 }
 
 export function upgradeRelic(state, id) {
+  if (!isOn('relics')) return { ok: false, reason: '유물 비활성' }; // 옵션 off → 액션 차단
   if (!RELICS[id]) return { ok: false, reason: '알 수 없는 유물' };
   const cap = relicCap(id);
   const lv = (state.relics && state.relics[id]) || 0;
@@ -47,7 +49,10 @@ export function upgradeRelic(state, id) {
 }
 
 // 계정 배수 (power / currency / growth). 유물 없으면 전부 1.
+//   옵션 off면 중립(1,1,1) 반환 → accountMods의 파워/수입 배수에서 유물 기여 제거.
+//   상태(state.relics)는 보존해 다시 켜면 복원된다(진행 시점별 적용).
 export function relicMods(state) {
+  if (!isOn('relics')) return { power: 1, currency: 1, growth: 1 };
   let power = 1, currency = 1, growth = 1;
   const owned = state.relics || {};
   for (const [id, lv] of Object.entries(owned)) {

@@ -184,7 +184,8 @@ export default function GrowthPanel({ state, bump, concept }) {
         )}
       </Card>
 
-      {/* 유물 */}
+      {/* 유물 — 옵션 off면 섹션 숨김 */}
+      {isOn('relics') && (
       <Card style={{ marginTop: 12 }}>
         <CodeTag id="h3" corner="tl" />
         <Text style={c.sec}>🏺 유물 <Text style={c.dim}>(계정 영구 성장 · 탭하여 강화)</Text></Text>
@@ -195,6 +196,7 @@ export default function GrowthPanel({ state, bump, concept }) {
           ))}
         </View>
       </Card>
+      )}
 
       {/* 엠블럼 */}
       <Card style={{ marginTop: 12 }}>
