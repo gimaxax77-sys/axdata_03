@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Modal, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { View, Text, StyleSheet, Modal, TouchableOpacity, Animated } from 'react-native';
 import { T, SPACE, RADIUS, FONT, WEIGHT, ELEV } from '../theme';
+import { reducedMotion } from '../motion';
 import { Btn } from '../components';
 import { nextObjective } from '../../system/core/tutorial.mjs';
 import { unlockStage } from '../../system/core/unlocks.mjs';
@@ -17,6 +18,13 @@ const ga = (w) => w + (hasBatchim(w) ? '이' : '가');
 // 첫 실행 소개 캐러셀 — 핵심 루프를 4장으로 설명.
 export function IntroModal({ concept, visible, onDone }) {
   const [i, setI] = useState(0);
+  // 슬라이드 전환 시 내용 페이드 인(접근성/절전이면 즉시 표시).
+  const fade = useRef(new Animated.Value(1)).current;
+  useEffect(() => {
+    if (reducedMotion()) { fade.setValue(1); return; }
+    fade.setValue(0);
+    Animated.timing(fade, { toValue: 1, duration: 260, useNativeDriver: true }).start();
+  }, [i]);
   const U = concept.terms.unit, S = concept.terms.stage;
   const slides = [
     { emoji: '🏰', title: `${concept.title}에 오신 걸 환영합니다`, body: `방치형 수집 RPG — 접속하지 않아도 ${ga(U)} 자동으로 싸우고 보상을 모읍니다.` },
@@ -30,9 +38,11 @@ export function IntroModal({ concept, visible, onDone }) {
     <Modal transparent animationType="fade" visible={visible} onRequestClose={onDone}>
       <View style={c.backdrop}>
         <View style={c.card}>
-          <Text style={c.emoji}>{s.emoji}</Text>
-          <Text style={c.title}>{s.title}</Text>
-          <Text style={c.body}>{s.body}</Text>
+          <Animated.View style={{ alignItems: 'center', opacity: fade }}>
+            <Text style={c.emoji}>{s.emoji}</Text>
+            <Text style={c.title}>{s.title}</Text>
+            <Text style={c.body}>{s.body}</Text>
+          </Animated.View>
           <View style={c.dots}>
             {slides.map((_, j) => <View key={j} style={[c.dot, j === i && c.dotOn]} />)}
           </View>
