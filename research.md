@@ -84,5 +84,13 @@
 - 배선 계약: assets/units/<concept>/<key>/<key>_<state>.png(가로16프레임 128²). 재렌더를 같은 경로에 덮어쓰면 코드 무수정 반영(Metro 정적 require라 목록은 명시적). 새 캐릭터 추가 시에만 unitSprites.js에 1줄.
 - 결과: docs/ART_A1_STATUS.md 작성(현황표+자동배선계약+A2 재렌더 흐름+SF 간극). A2/A3는 Gim PC 렌더(코드 무관, 에셋 덮어쓰기+재빌드). 헛작업 안 만들고 정직 보고.
 
+## 2026-07-18 — 시나리오(서사) 점검
+- 요청: 게임팩 시나리오 점검·정리·브리핑.
+- 구조: 서사 3축. ①캠페인(campaign.mjs, 12챕터 보스전, 로직은 Core·서사텍스트는 concept.campaign) ②캐릭터 대사(lines greet/bond/levelup, linesOf로 조회) ③씨앗 서사(seed.mjs 6조건, narr 짧은 문구, 성장연동 flavor).
+- 판타지 '엘드리아 연대기': campaign 12챕터(1부8+2부4). 균열→마수→심연→새벽 맹세. 각 챕터 제목+1~2문장. **캐릭터 lines 0개**(도감 필드 id/name/emoji/archetype만). rarity/element/signature 없음(FEATURES elements/rarity=false 단순모드라 무해).
+- SF '오비탈 프로토콜'(167줄): campaign 12챕터(판타지와 동일 12비트를 우주정거장/AI신호로 평행 리스킨). **캐릭터마다 personality+title(별칭)+lines 3종 완비** + rarity/element/signature.
+- 핵심 간극: (a)주력 판타지가 SF보다 서사 빈약—캐릭터 대사·성격·별칭 전무(SF는 있음). (b)캠페인이 보스 앞 1~2문장 flavor뿐—플롯 내 등장인물·대사씬·분기 없음, 빌런은 무명 원형('그림자 군주'). (c)씨앗 narr는 플롯 아닌 성장 라벨. 장점: storyLog(클리어 챕터 정주행), concept 스왑 구조, 12비트 완결.
+- 결과: 코드 무변경(점검만). 개선 후보: 판타지 캐릭터 lines 추가(SF 대비 동등화)가 저비용·고효과. 챕터 서사 확장·대사씬은 중간규모.
+
 
 
