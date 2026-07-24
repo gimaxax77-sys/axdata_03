@@ -64,3 +64,30 @@ test('콘텐츠 OFF: 액션 차단 (arena/guild/tower/season/events)', () => {
     finally { FEATURES[key] = true; }
   }
 });
+
+import { summonMasteryPower, claimSummonLevel } from '../core/summonMastery.mjs';
+import { intimacyBonus, giveGift } from '../core/intimacy.mjs';
+import { purchase } from '../core/shop.mjs';
+import { equipCostume } from '../core/costumes.mjs';
+
+test('독립 4모듈 OFF: 중립·차단 (summon/intimacy/shop/costumes)', () => {
+  const s = createGameState({ units: [{ uid: 'u1', archetype: 'STRIKER', level: 1, rank: 1, intimacy: 500 }], party: [] });
+  const u = s.units[0];
+  earn(s.wallet, { gem: 1e9, currency: 1e9 });
+  // summon
+  FEATURES.summon = false;
+  try { assert.equal(summonMasteryPower(s), 1, 'summon off 중립'); assert.equal(claimSummonLevel(s, 'hero').ok, false, 'summon off 차단'); }
+  finally { FEATURES.summon = true; }
+  // intimacy
+  FEATURES.intimacy = false;
+  try { assert.equal(intimacyBonus(u), 0, 'intimacy off 스탯0'); assert.equal(giveGift(s, 'u1').ok, false, 'intimacy off 차단'); }
+  finally { FEATURES.intimacy = true; }
+  // shop
+  FEATURES.shop = false;
+  try { assert.equal(purchase(s, 'nope').ok, false, 'shop off 차단'); }
+  finally { FEATURES.shop = true; }
+  // costumes
+  FEATURES.costumes = false;
+  try { assert.equal(equipCostume(s, u, 'nope').ok, false, 'costumes off 차단'); }
+  finally { FEATURES.costumes = true; }
+});

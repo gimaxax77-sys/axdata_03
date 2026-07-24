@@ -1,4 +1,5 @@
 import { spend } from './economy.mjs';
+import { isOn } from './features.mjs';
 
 // ─────────────────────────────────────────────────────────────
 // 친밀도 — 유닛별 호감도. 선물로 올리며, 레벨업 시 소량 스탯 보너스 +
@@ -19,6 +20,7 @@ export function intimacyProgress(unit) {
 }
 // 친밀도 레벨당 전 스탯 +2% (해당 유닛)
 export function intimacyBonus(unit) {
+  if (!isOn('intimacy')) return 0; // 옵션 off → 스탯 기여 0
   return intimacyLevel(unit) * 0.02;
 }
 export function giftCost(unit) {
@@ -27,6 +29,7 @@ export function giftCost(unit) {
 
 // 선물하기: currency 소모 → 친밀도 상승.
 export function giveGift(state, uid) {
+  if (!isOn('intimacy')) return { ok: false, reason: '친밀도 비활성' };
   const u = state.units.find((x) => x.uid === uid);
   if (!u) return { ok: false, reason: '유닛 없음' };
   if (intimacyLevel(u) >= INTIMACY_MAX) return { ok: false, reason: '최대 친밀도' };

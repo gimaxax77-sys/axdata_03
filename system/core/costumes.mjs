@@ -1,4 +1,5 @@
 import { computePower } from './stats.mjs';
+import { isOn } from './features.mjs';
 
 // ─────────────────────────────────────────────────────────────
 // 코스튬(스킨) — 캐릭터가 장착하는 순수 외형. 능력치 무관(비 P2W).
@@ -65,6 +66,7 @@ export function costumeFits(costume, unit) {
 
 // 장착 — 보유 + 적합 시 unit.skin 설정(순수 외형).
 export function equipCostume(state, unit, id) {
+  if (!isOn('costumes')) return { ok: false, reason: '코스튬 비활성' };
   const c = COSTUMES[id];
   if (!c) return { ok: false, reason: '없는 코스튬' };
   if (!ownsCostume(state, id)) return { ok: false, reason: '미보유' };

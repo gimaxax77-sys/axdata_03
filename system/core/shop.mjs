@@ -1,4 +1,5 @@
 import { earn, spend } from './economy.mjs';
+import { isOn } from './features.mjs';
 import { getStage } from './progression.mjs';
 import { refreshDaily } from './daily.mjs';
 import { grantPremium } from './cosmetics.mjs';
@@ -67,6 +68,7 @@ export function packageOwned(state, id) {
 
 // 구매 처리. 성공 시 { ok, grant }.
 export function purchase(state, id, now = Date.now()) {
+  if (!isOn('shop')) return { ok: false, reason: '상점 비활성' };
   const p = find(id);
   if (!p) return { ok: false, reason: '알 수 없는 상품' };
   refreshDaily(state, now);

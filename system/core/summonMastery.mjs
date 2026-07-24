@@ -1,4 +1,5 @@
 import { earn } from './economy.mjs';
+import { isOn } from './features.mjs';
 import { getStage } from './progression.mjs';
 
 // ─────────────────────────────────────────────────────────────
@@ -77,6 +78,7 @@ export function summonMasteryInfo(state, banner) {
 
 // 다음 미청구 레벨 하나를 청구(순차). 도달하지 못했으면 실패.
 export function claimSummonLevel(state, banner) {
+  if (!isOn('summon')) return { ok: false, reason: '소환 숙련 비활성' };
   const m = ensure(state, banner);
   const level = levelForCount(m.count);
   if (m.claimed >= SUMMON_LEVEL_MAX) return { ok: false, reason: '최대 레벨' };
@@ -102,6 +104,7 @@ export function claimAllSummonLevels(state) {
 
 // 청구한 홀수 레벨들의 능력치 보상 합 → 계정 파워 배수(1 + Σ).
 export function summonMasteryPower(state) {
+  if (!isOn('summon')) return 1; // 옵션 off → 중립
   if (!state.summonMastery) return 1;
   let bonus = 0;
   for (const banner of SUMMON_BANNERS) {
