@@ -127,3 +127,10 @@
 - (a)로직: arenaFight·guildAttack·climbTower·seasonChallenge·claimWeekly 첫줄 isOn 가드(off면 차단). 스크립트로 5파일 import+가드 앵커검증 일괄삽입. (c)상태 보존. (b)패시브 파워 없어 무관. (d)UI: ArenaGuildScreen 아레나/무한탑/길드 3Card를 CodeTag(m1/m2/m3) 앵커 역순삽입 스크립트로 isOn 래핑. ContentScreen 서브탭 필터(경쟁=arena|tower|guild, 이벤트=events|season, anims는 SUBTABS길이라 안전) + 이벤트(l1)/시즌(l2) Card 개별 게이트.
 - 검증: module-gating.test.mjs 콘텐츠 off차단 테스트 4 pass(전체 gating). 전체 286개 중 285 pass·0 fail. ArenaGuild/Content esbuild OK. expo 재빌드→웹 부팅·콘솔에러0, 콘텐츠 경쟁탭 3섹션 렌더 정상(ON 기본). 커밋 870c597.
 - 진행: 게이팅 11/18 (계정파워 4 + 콘텐츠 5 + 기존 elements/rarity). 남음: runes·sigweapon·gear(유닛축), summon·costumes·intimacy·shop. sigweapon/intimacy off는 씨앗 oath/bond 연쇄 점검 필요, gear는 핵심축 신중.
+
+## 2026-07-24 — GUI 냉정 리뷰 (폴더 개명: axdata_03 → axdata_03_엘드리아 파생)
+- 참고: 세션 사이 폴더 개명됨. repo 새 경로 = D:\.CODE\AXdata\axdata_03_엘드리아 파생\axdata_03-main. 유실 없음(커밋·미커밋 게이팅 변경 모두 온전). 다른 폴더도 개명(axdata_01_엘드리아, axdata_11_엘로그, axdata_engine_엘로그2_cocos).
+- 요청: "gui 리뷰"(직전 멤 검색 "세븐나이츠 gui" 맥락). 레퍼런스=세븐나이츠 키우기·AFK·버섯커.
+- 리뷰: 하단탭6(전투/영웅/소환/원정/콘텐츠/상점)+자원바. 문제 G1 영웅탭 과부하(로스터+상세+편성+성장 16뷰, 1266줄, 유물 도달 3~4탭). G2 주 루프 초점 분산(방치·무한탑·원정·캠페인 흩어짐). G3 시각위계·타격감 밋밋(텍스트 위주). G4 세로 스크롤 과다. G5(중요) 모듈 토킷에 맞는 조립식 적응형 레이아웃 미설계.
+- 제언: 🔴G2 메인 CTA 초점화, 🔴G1 영웅탭 성장 분리, 🟡G5 적응형 레이아웃, 🟡G3 연출, 🟢G4 압축·첫전투 온보딩.
+- 결과: docs/GUI_REVIEW.md 작성. 코드 무변경(리뷰만). 미커밋 게이팅(독립4)은 여전히 대기.
