@@ -134,3 +134,10 @@
 - 리뷰: 하단탭6(전투/영웅/소환/원정/콘텐츠/상점)+자원바. 문제 G1 영웅탭 과부하(로스터+상세+편성+성장 16뷰, 1266줄, 유물 도달 3~4탭). G2 주 루프 초점 분산(방치·무한탑·원정·캠페인 흩어짐). G3 시각위계·타격감 밋밋(텍스트 위주). G4 세로 스크롤 과다. G5(중요) 모듈 토킷에 맞는 조립식 적응형 레이아웃 미설계.
 - 제언: 🔴G2 메인 CTA 초점화, 🔴G1 영웅탭 성장 분리, 🟡G5 적응형 레이아웃, 🟡G3 연출, 🟢G4 압축·첫전투 온보딩.
 - 결과: docs/GUI_REVIEW.md 작성. 코드 무변경(리뷰만). 미커밋 게이팅(독립4)은 여전히 대기.
+
+## 2026-07-24 — 세븐나이츠 최종본 기준 UI 골격 명세서 작성
+- 요청: 세븐나이츠 최종 목업(seven-real.html) 기준으로 실제 인앱 적용 GUI/UI 골격 명세서 요소별 상세 작성.
+- 확인: seven-real.html=정정된 실제 레이아웃(상단바 프로필+재화+진행 / 좌측 세로 기능레일 / 중앙 편성10+AUTO+소환 / 우측 던전카드 / 하단 2단탭 모험·영웅·소환·장비·던전). ui-mockups.html의 "현황판" 오류를 실측으로 정정한 버전.
+- 작성: docs/UI_SKELETON_SPEC.md. 존맵(G1 AppShell·G2 TopBar·G3 StageView·G4a LeftRail·G4b RightCards·G4c ActionDock·G5 BottomNav 2단) + 요소별 명세(역할/구성/치수/고정vs슬롯/데이터/적응형) + 3계층 레지스트리 구현규약(tabs/위젯슬롯/플래그) + 적응형 규칙(§9 collapse) + 현행 axdata_03 대비 갭표 + 우선구현순서.
+- 근거: seven-real.html(WebFetch 실측), axdata_engine_엘로그2_cocos/UI_ARCHITECTURE.md(3계층), 현행 App.js/ResourceBar/화면구조.
+- 핵심 결론: 계층1(탭 ALL_TABS)·계층3(플래그 features.mjs)은 있음, 빠진 건 계층2 "위젯 슬롯"(좌/우 레일·ActionDock 레지스트리화). 코드 무변경(명세만).
