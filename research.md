@@ -141,3 +141,10 @@
 - 작성: docs/UI_SKELETON_SPEC.md. 존맵(G1 AppShell·G2 TopBar·G3 StageView·G4a LeftRail·G4b RightCards·G4c ActionDock·G5 BottomNav 2단) + 요소별 명세(역할/구성/치수/고정vs슬롯/데이터/적응형) + 3계층 레지스트리 구현규약(tabs/위젯슬롯/플래그) + 적응형 규칙(§9 collapse) + 현행 axdata_03 대비 갭표 + 우선구현순서.
 - 근거: seven-real.html(WebFetch 실측), axdata_engine_엘로그2_cocos/UI_ARCHITECTURE.md(3계층), 현행 App.js/ResourceBar/화면구조.
 - 핵심 결론: 계층1(탭 ALL_TABS)·계층3(플래그 features.mjs)은 있음, 빠진 건 계층2 "위젯 슬롯"(좌/우 레일·ActionDock 레지스트리화). 코드 무변경(명세만).
+
+## 2026-07-24 — UI 아트 이미지 사이즈 명세 + 골격 매핑
+- 요청: 각 GUI/UI별 필요 아트 이미지 사이즈 정리 + 명세서(UI_SKELETON_SPEC) 매핑.
+- 작성: docs/UI_ART_SPEC.md. 밀도규약(@4x제작·@2x/@3x출고, PNG알파, 9-slice, 아틀라스) + 존별 아트표(자원/TopBar/StageView/LeftRail/RightCards/ActionDock/BottomNav/수집성장/공용킷) — 각 dp·@2x·@3x·포맷·제작소스·비고. 골격 존→아트 매핑 요약표. 제작 파이프라인 배정(🅑 axdata_05 Blender·🅢 axdata_09 스튜디오·🅟 pixellab·✎ CSS).
+- 기준 실측: 유닛 스프라이트 2048×128(128²×16). 자원아이콘 assets/ui/*.png 존재. resIcon 표시 22.
+- 핵심: 아트파일 필수=아이콘세트·등급프레임·초상·소환배너·스테이지배경·VFX/데미지폰트. 나머지(배경·바·카드)=CSS. 아이콘/프레임류는 pixellab로 즉시 생성 가능(본세션), 캐릭/초상/배경은 PC(🅑)·API(🅢).
+- 결과: docs/UI_ART_SPEC.md 커밋. 코드 무변경.
