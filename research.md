@@ -154,3 +154,11 @@
 - 종합(mem 11게임 조사 재활용): 공통 5대 골격(재화바·중앙전투뷰·좌우플로팅·하단탭·AFK독)은 동일, 차이는 "중앙 허브 유형"뿐. 3유형: A 마을허브(AFK) / B 현황판·탭바(세븐나이츠, 좌 기능레일+우 던전카드+2단탭) / C 중앙램프(버섯커, 자동화 창). 화면수 AFK17·세븐18·버섯16. 팔레트 다크+골드/네온 공통.
 - 매핑: 우리 UI_SKELETON_SPEC의 StageView(렌더러 주입)면 3유형 다 수용→교차검증. 빠진 실체=좌/우 레일·ActionDock 레지스트리 슬롯화(§11과 동일).
 - 결과: docs/UI_LAYOUT_BENCHMARK.md 작성(3허브유형·게임별 비교표·화면인벤토리·세부패턴·골격매핑검증·팔레트). 코드 무변경. 저작권: 공개 스크린샷·리뷰 출처, 구조만 학습.
+
+## 2026-07-25 — GUI 아이콘 SVG 세트 제작(투톤 회색+골드 토킷)
+- 요청: "샘플 재확인" → 아이콘 아트 방향 확정 → 전체 세트 제작.
+- 과정: 직전 세션(게임2_데스크탑, local_e46c91bc) show_widget 샘플은 파일 미저장 → 내용 파악 후 재렌더. 팔레트 변천: 퍼플/골드(옛 theme, 폐기) → 레드 accent(danger 충돌 우려 반박) → Gim 최종 "투톤 회색빛+골드 테두리" 채택. 골드=선택·보상 겸용이라 컬러 강조색 불필요.
+- 범위 결정(선택박스): react-native-svg 미설치 확인 → Gim "설치 없이 SVG 소스만" 선택. App.js·빌드 무변경.
+- 결과: assets/icons/ 14종 SVG(탭6 battle·hero·summon·expedition·content·shop + 액션8 gear·mail·auto·fast·quest·dungeon·arena·gift). 각 viewBox 24, 2px, CSS 변수(--icon-fill #7b818e/--icon-line #c3c8d2/--icon-gold #e8b84b/-soft #f6d488)+폴백 → 단독 렌더 OK·토큰 스왑 OK. gift만 골드(보상). README.md(팔레트·상태규약·RN 배선법) + _generate.mjs(재생성기).
+- 상태 규약: 아이콘=항상 회색 실루엣, 활성/선택은 컨테이너 골드 테두리(아이콘 SVG 불변). 
+- 남은 배선(다음): react-native-svg 설치 → path를 JS 컴포넌트화(fill/stroke prop 주입, RN은 <style> CSS var 미인식) → App.js ALL_TABS 이모지 교체 + 활성탭 골드 border.

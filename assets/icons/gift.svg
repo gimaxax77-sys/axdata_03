@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" role="img" aria-label="수령(보상)">
+  <!-- 수령(보상) 아이콘 · 투톤 회색+골드 토킷 세트 -->
+  <style>
+    .fill{ fill:var(--icon-fill,#7b818e); }
+    .line{ fill:none; stroke:var(--icon-line,#c3c8d2); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .reward-fill{ fill:var(--icon-gold,#e8b84b); }
+    .reward-line{ fill:none; stroke:var(--icon-gold-soft,#f6d488); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  </style>
+  <rect class="reward-fill" x="4" y="10" width="16" height="10" rx="1.5"/><path class="reward-line" d="M4 10h16M12 10v10M12 10c-2-4-6-4-6-1s4 1 6 1zM12 10c2-4 6-4 6-1s-4 1-6 1z"/>
+</svg>
